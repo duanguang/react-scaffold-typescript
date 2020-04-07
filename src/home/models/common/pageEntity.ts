@@ -4,7 +4,7 @@ export interface IPageEntity<T>{
      rows:Array<T>
      pageSize:number,
      page:number,
-     records:number
+     records:number,
 }
 export class PageEntity<P> extends BaseEntity<IPageEntity<P>>{
    result:IPageEntity<P>={
@@ -12,9 +12,11 @@ export class PageEntity<P> extends BaseEntity<IPageEntity<P>>{
      rows:[],
      pageSize:10,
      page:1,
-     records:0
+     records:0,
    };
+    // tslint:disable-next-line: typedef
    constructor(fromJson,entity?){
+      // @ts-ignore
        super(fromJson);
        if(fromJson){
            let result=fromJson.data;

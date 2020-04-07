@@ -13,7 +13,7 @@ class MockEntity{
     @JsonProperty('name')
     name = void 0
 }
- 
+
 interface IMockEntity{
     msg:string,
     ok:boolean,

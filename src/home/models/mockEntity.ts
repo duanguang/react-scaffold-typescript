@@ -1,10 +1,10 @@
 import {JsonProperty} from 'json-mapper-object';
-import {BaseEntity} from "./common/baseEntity";
+import {BaseEntity} from './common/baseEntity';
 class UserEntity{
 
-    
+
     /**
-     *姓名
+     * 姓名
      *
      * @memberof UserEntity
      */
@@ -28,10 +28,10 @@ export class MockEntity{
     companyId = void 0
 
     @JsonProperty('loginId')
-    loginId = void 0
+    loginId:number = -1
 
     /**
-     *用户信息
+     * 用户信息
      *
      * @memberof MockEntity
      */
@@ -47,6 +47,7 @@ interface IMockEntity{
 }
 export class MockContainerEntity extends BaseEntity<MockEntity>{
     constructor(fromJson:IMockEntity){
+       // @ts-ignore
         super(fromJson);
         this.message=fromJson.msg||'查询成功';
         this.success=fromJson.ok||true;

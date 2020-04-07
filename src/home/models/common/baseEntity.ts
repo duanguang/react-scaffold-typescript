@@ -1,9 +1,10 @@
-import { MapperEntity } from "json-mapper-object";
+import { MapperEntity } from 'json-mapper-object';
 
 export class BaseEntity<T> {
 
+
   /**
-   *操作结果
+   * 操作结果
    *
    * @type {boolean}
    * @memberof BaseEntity
@@ -28,37 +29,40 @@ export class BaseEntity<T> {
 
 
   /**
-   *返回数据信息
+   * 返回数据信息
    *
    * @type {T}
    * @memberof BaseEntity
    */
   result:T = null;
-  constructor(fromJson) {
-  }
+
+  // tslint:disable-next-line: typedef
   transformArray(rows, mapEntity) {
     return (rows || []).map((row) => {
       return this.transformRow(row, mapEntity);
     })
   }
+  // tslint:disable-next-line: typedef
   transformRows(rows, mapEntity) {
     return (rows || []).map((row) => {
       return this.transformRow(row, mapEntity);
     })
   }
-  transformRow(row, mapEntity) {
+  // tslint:disable-next-line: typedef
+  transformRow(row, mapEntity): T {
     return MapperEntity(mapEntity, row);
   }
 }
 
 export class ContainerEntity<T> extends BaseEntity<T> {
-  constructor(fromService) {
-    super(fromService);
+  // tslint:disable-next-line: typedef
+  constructor(fromService?) {
+    super();
     if(fromService&&typeof fromService==='object'){
       this.code= fromService.status||''
-      this.message = fromService.msg||''
+      this.message = fromService.msg||fromService.tip||''
       this.result = fromService.data
-      this.success = fromService.ok||false
+      this.success = fromService.ok||fromService.success||false
     }
   }
 }

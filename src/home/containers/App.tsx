@@ -1,14 +1,20 @@
+import { Route, Switch } from 'legions/router';
 import React from 'react';
-import Todo from '../components/todo';
-import {Route, Switch} from "legions/router";
-export default class App extends React.Component<{}> {
-    render(){
+import '../assets/css/theme.less';
+
+
+export default class App extends React.Component {
+    constructor(){
+        super()
+    }
+    render() {
         return (
-            <div>
-                <Switch>             
-                    <Route  component={Todo}/>
+                <Switch>
+
+                    {/* <Route path="/admin" component={HomeManage}></Route> */}
+                    {/* <Route path="/" component={LcmTest}></Route> */}
+                    {/* <Route component={Todo}/> */}
                 </Switch>
-            </div>
         );
     }
 }
