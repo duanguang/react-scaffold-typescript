@@ -1,4 +1,5 @@
 const { createTransformer,createTransformerReactJsxProps } = require('ts-plugin-legions');
+const FilterWarningsPlugin = require('webpack-filter-warnings-plugin');
 var packageConfig = require('./package.json');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const webpack = require('webpack');
@@ -68,15 +69,18 @@ module.exports = function (configs) {
                     summaryContent: '',
                 }),
                 new webpack.NamedChunksPlugin(),
+                new FilterWarningsPlugin({
+                    exclude: /export .* was not found in/,
+                })
             ],
             extend: (loaders, { isDev, loaderType, projectType,transform }) => {
-                if (loaderType === 'HotLoader' && isDev) {
+                /* if (loaderType === 'HotLoader' && isDev) {
                     loaders.push({
                         test: /\.(jsx|js)?$/,
                         loader: 'react-hot-loader!babel-loader',
                         include: [path.join(process.cwd(), 'node_modules/hoolinks-legion-design')],
                     });
-                }
+                } */
                 if (loaderType === 'JsLoader') {
                     loaders.push({
                         test: /\.(jsx|js)?$/,
@@ -137,21 +141,24 @@ module.exports = function (configs) {
         babel: {
             query: {
                 presets: [
-                    "es2015",
-                    "stage-2",
-                    "react"
-                ],
+                    [
+                    "@babel/preset-env",
+                    {
+                     /*  targets: {
+                        esmodules: true,
+                      }, */
+                      "useBuiltIns": "usage",
+                      "corejs": "2",
+                    }
+                  ],
+                 /*  "@babel/preset-env", */
+                "@babel/preset-react"],
                 cacheDirectory: '.webpack_cache',
                 plugins:  [
-                    "add-module-exports",
-                    "transform-runtime",
-                    "transform-decorators-legacy",
-                    [
-                        "import",
-                        [
-                            {libraryName: "antd", style: true}
-                        ]
-                    ]
+                    'add-module-exports',
+        '@babel/plugin-transform-runtime',
+        ["@babel/plugin-proposal-decorators", { "legacy": true }],
+                    ['import', { libraryName: 'antd', style: true }],
                 ]
             }
         }
