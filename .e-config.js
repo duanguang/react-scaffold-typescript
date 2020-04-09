@@ -1,4 +1,4 @@
-const { createTransformer,createTransformerReactJsxProps } = require('ts-plugin-legions');
+/* const { createTransformer,createTransformerReactJsxProps } = require('ts-plugin-legions'); */
 var packageConfig = require('./package.json');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const webpack = require('webpack');
@@ -40,15 +40,9 @@ module.exports = function (configs) {
                 'history',
                 'invariant',
                 'warning',
-                'hoist-non-react-statics',
-                'sortablejs',
-                'xlsx',
-                "dexie",
-                "html2canvas",
-                "clipboard",
-                "jsbarcode"]
+                'hoist-non-react-statics']
             },
-            tsCompilePlugin: {
+            /* tsCompilePlugin: {
                 option: {
                     getCustomTransformers:() => ({ before: [createTransformer(),createTransformerReactJsxProps({
                         components: [{ name: 'HLTable',props: 'uniqueUid',value: '' },
@@ -56,7 +50,7 @@ module.exports = function (configs) {
                         { name: 'QueryConditions',props: 'uniqueUid' }]
                     })] })
                 },
-            },
+            }, */
             disableReactHotLoader: false,
             cssModules: {
                 enable: true, // 默认false
@@ -70,27 +64,6 @@ module.exports = function (configs) {
                 new webpack.NamedChunksPlugin(),
             ],
             extend: (loaders, { isDev, loaderType, projectType,transform }) => {
-                if (loaderType === 'HotLoader' && isDev) {
-                    loaders.push({
-                        test: /\.(jsx|js)?$/,
-                        loader: 'react-hot-loader!babel-loader',
-                        include: [path.join(process.cwd(), 'node_modules/hoolinks-legion-design')],
-                    });
-                }
-                if (loaderType === 'JsLoader') {
-                    loaders.push({
-                        test: /\.(jsx|js)?$/,
-                        include: [path.join(process.cwd(), 'node_modules/hoolinks-legion-design')],
-                        loader: 'happypack/loader?id=js',
-                    });
-                }
-                if (loaderType === 'TsLoader' && projectType === 'ts') {
-                    loaders.push({
-                        test: /\.(ts|tsx)$/,
-                        include: [path.join(process.cwd(), 'node_modules/hoolinks-legion-design')],
-                        loader: 'happypack/loader?id=ts',
-                    });
-                }
                 // transform = {
                 //     cssModule: CSS_MODULE_OPTION, // 内部css modules 默认值
                 //     LoaderOptions: postcss_loader, // 内部默认加载器参数
@@ -99,24 +72,9 @@ module.exports = function (configs) {
                 if (loaderType === 'StyleLoader' && transform) {
                     const newLoaders = [
                         {
-                            test: new RegExp(`^(?!.*\\.modules).*\\.css`),
-                            use: transform.execution(null, null, transform.LoaderOptions),
-                            include: [path.join(process.cwd(), 'node_modules/hoolinks-legion-design')],
-                        },
-                        {
-                            test: new RegExp(`^(.*\\.modules).*\\.css`),
-                            use: transform.execution(transform.cssModule, null, transform.LoaderOptions),
-                            include: [path.join(process.cwd(), 'node_modules/hoolinks-legion-design')],
-                        },
-                        {
-                            test: new RegExp(`^(?!.*\\.modules).*\\.less`),
-                            use: transform.execution(null, 'less-loader', transform.LoaderOptions),
-                            include: [path.join(process.cwd(), 'node_modules/hoolinks-legion-design')],
-                        },
-                        {
-                            test: new RegExp(`^(.*\\.modules).*\\.less`),
-                            use: transform.execution(transform.cssModule, 'less-loader', transform.LoaderOptions),
-                            include: [path.join(process.cwd(), 'node_modules/hoolinks-legion-design')],
+                            test: /\.css/,
+                            use: transform.execution(null, null, null),
+                            include: [path.resolve(process.cwd(), 'node_modules')],
                         },
                     ];
                     loaders.push(...newLoaders);
@@ -149,7 +107,7 @@ module.exports = function (configs) {
                     [
                         "import",
                         [
-                            {libraryName: "antd", style: true}
+                            {libraryName: "antd-mobile", style: true}
                         ]
                     ]
                 ]

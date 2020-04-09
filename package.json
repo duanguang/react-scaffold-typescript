@@ -34,18 +34,11 @@
       "@types/node": "^10.0.0",
       "@types/react": "^15.6.6",
       "@types/react-dom": "^0.14.22",
-      "antd": "^2.7.4",
+      "antd-mobile": "^2.3.0",
       "bundle-loader": "^0.5.5",
       "json-mapper-object": "^0.0.9",
-      "hoolinks": "^0.1.5",
-      "hoolinks-legion-design":"1.0.52",
       "legions": "^0.1.23",
-      "legions-utils": "^0.0.6",
-      "sortablejs": "^1.10.0-rc3",
-      "socket.io-client":"^2.2.0",
-      "ts-plugin-legions":"^0.0.9",
-      "xlsx": "^0.14.4",
-      "dexie":"^2.0.4"
+      "legions-utils": "^0.0.6"
     }
   }
   
