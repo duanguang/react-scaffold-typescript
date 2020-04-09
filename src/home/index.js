@@ -1,6 +1,6 @@
 import  create from 'legions';
 import App from './containers/App';
-import '../common/components/nprogress/index.css';
+/* import '../common/components/nprogress/index.css'; */
 const app = create({enableDevTools:false,router: true,history:null});
 app.start(App, '#react-lcm');
 
