@@ -2,7 +2,7 @@ import { HttpConfigTest } from './http.test.config';
 import { HttpConfigBeta } from './http.beta.config';
 import { HttpConfigDev } from './http.dev.config';
 import { HttpConfigPreBeta } from './http.dist.config';
-import { getCookie } from '../../common/utils/cookie';
+import {setCookie,getCookie,removeCookie,clearAllCookie } from 'hoolinks-legion-design/lib/utils/cookie'
 function getConfig() {
     if (process.env.environment === 'dist') {
         return HttpConfigPreBeta; // 预发布环境 执行指令yarn build:dist
