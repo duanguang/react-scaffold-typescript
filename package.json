@@ -26,7 +26,7 @@
       "@commitlint/config-conventional": "^7.3.1",
       "babel-cli": "^6.14.0",
       "babel-polyfill": "^6.23.0",
-      "brain-cli": "^1.0.6",
+      "brain-cli": "^1.0.8-alpha.0",
       "husky": "^1.3.1",
       "rimraf": "^2.5.4"
     },
@@ -38,7 +38,7 @@
       "json-mapper-object": "^0.0.9",
       "hoolinks": "^0.1.5",
       "hoolinks-legion-design": "1.0.55",
-      "legions": "^1.0.9",
+      "legions": "1.0.9-beta",
       "legions-utils": "^0.0.6",
       "sortablejs": "^1.10.0-rc3",
       "socket.io-client": "^2.2.0",
