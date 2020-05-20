@@ -30,7 +30,7 @@ module.exports = function (configs) {
         entries: ['src/home/index'],
         webpack: {
             dllConfig: {
-                vendors: [ 'react',
+                vendors: [ /* 'react', */
                 'mobx',
                 'mobx-react',
                 'superagent',
@@ -49,6 +49,7 @@ module.exports = function (configs) {
                 "clipboard",
                 "jsbarcode"]
             },
+            commonsChunkPlugin: ['hoolinksDesign','common','vendor'],
             tsCompilePlugin: {
                 option: {
                     getCustomTransformers:() => ({ before: [createTransformer(),createTransformerReactJsxProps({
@@ -61,6 +62,21 @@ module.exports = function (configs) {
             disableReactHotLoader: false,
             cssModules: {
                 enable: true, // 默认false
+            },
+            optimization: {
+                splitChunks: {
+                  cacheGroups: {
+                    hoolinksDesign: {
+                      chunks: "initial",
+                      minChunks: 1,
+                      name: "hoolinksDesign",
+                      priority: 7,
+                      test: /hoolinks-legion-design/,
+                      //maxInitialRequests: 5, // The default limit is too small to showcase the effect
+                      minSize: 0 // This is example is too small to create commons chunks
+                    }
+                  }
+                },
             },
             plugins: [
                 new ProgressBarPlugin({
@@ -100,7 +116,7 @@ module.exports = function (configs) {
                 //     LoaderOptions: postcss_loader, // 内部默认加载器参数
                 //     execution: generateLoaders // 内部通用生成loader use 值函数
                 // }
-                if (loaderType === 'StyleLoader' && transform) {
+                /* if (loaderType === 'StyleLoader' && transform) {
                     const newLoaders = [
                         {
                             test: new RegExp(`^(?!.*\\.modules).*\\.css`),
@@ -124,7 +140,7 @@ module.exports = function (configs) {
                         },
                     ];
                     loaders.push(...newLoaders);
-                }
+                } */
             },
             /* commonsChunkPlugin:['react','mobx-react','mobx','babel-polyfill','superagent',
                 'react-router-dom','classnames','isomorphic-fetch',
@@ -148,7 +164,13 @@ module.exports = function (configs) {
                         esmodules: true,
                       }, */
                       "useBuiltIns": "usage",
-                      "corejs": "2",
+                        "corejs": "2",
+                        "targets": {
+                            "browsers": [ // 浏览器
+                                "last 2 versions",
+                                "ie >= 10"
+                              ],
+                          },
                     }
                   ],
                  /*  "@babel/preset-env", */
