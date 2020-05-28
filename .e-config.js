@@ -4,7 +4,7 @@ var packageConfig = require('./package.json');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const webpack = require('webpack');
 const chalk = require('chalk');
-const  path = require('path');
+const path = require('path');
 module.exports = function (configs) {
     configs = Object.assign({}, configs, {
         name: packageConfig.name,
@@ -63,6 +63,9 @@ module.exports = function (configs) {
             cssModules: {
                 enable: true, // 默认false
             },
+            cssLoaders: {
+                include: [path.join(process.cwd(), 'node_modules/hoolinks-legion-design')],
+            },
             optimization: {
                 splitChunks: {
                   cacheGroups: {
@@ -116,31 +119,65 @@ module.exports = function (configs) {
                 //     LoaderOptions: postcss_loader, // 内部默认加载器参数
                 //     execution: generateLoaders // 内部通用生成loader use 值函数
                 // }
-                /* if (loaderType === 'StyleLoader' && transform) {
+                if (loaderType === 'StyleLoader' && transform) {
                     const newLoaders = [
+                        {
+                            test: /\.css$/,
+                            use: transform.execution(null, null, null),
+                            exclude: [path.join(process.cwd(), 'node_modules/hoolinks-legion-design')],
+                            include: [path.join(process.cwd(), 'node_modules')]
+                        },
                         {
                             test: new RegExp(`^(?!.*\\.modules).*\\.css`),
                             use: transform.execution(null, null, transform.LoaderOptions),
+                            // use: ExtractTextPlugin.extract({
+                            //     fallback: 'style-loader',
+                            //     use: [{ loader: 'css-loader' ,options:{
+                            //         importLoaders: 1,
+                            //         }}]
+                            // }),
                             include: [path.join(process.cwd(), 'node_modules/hoolinks-legion-design')],
                         },
                         {
                             test: new RegExp(`^(.*\\.modules).*\\.css`),
                             use: transform.execution(transform.cssModule, null, transform.LoaderOptions),
+                            // use: ExtractTextPlugin.extract({
+                            //     fallback: 'style-loader',
+                            //     use: [{ loader: 'css-loader' ,options:{ modules: true,
+                            //         importLoaders: 1,
+                            //         localIdentName: `[local]-[hash:base64:6]`}},'resolve-url-loader',transform.LoaderOptions]
+                            // }),
                             include: [path.join(process.cwd(), 'node_modules/hoolinks-legion-design')],
                         },
                         {
                             test: new RegExp(`^(?!.*\\.modules).*\\.less`),
-                            use: transform.execution(null, 'less-loader', transform.LoaderOptions),
+                            use: transform.execution(null, { loader: 'less-loader', options: { javascriptEnabled: true } }),
+                            // use: ExtractTextPlugin.extract({
+                            //     fallback: 'style-loader',
+                            //     use: [{ loader: 'css-loader' ,options:{
+                            //         importLoaders: 1,
+                            //         }},{ loader: 'less-loader', options: { javascriptEnabled: true } },transform.LoaderOptions]
+                            // }),
                             include: [path.join(process.cwd(), 'node_modules/hoolinks-legion-design')],
                         },
                         {
+                            /* test: /\.less/, */
                             test: new RegExp(`^(.*\\.modules).*\\.less`),
-                            use: transform.execution(transform.cssModule, 'less-loader', transform.LoaderOptions),
+                            // use: ExtractTextPlugin.extract({
+                            //     fallback: 'style-loader',
+                            //     use: [{ loader: 'css-loader' ,options:{ modules: true,
+                            //         importLoaders: 2,
+                            //         localIdentName: `[local]-[hash:base64:6]`}},{ loader: 'less-loader', options: { javascriptEnabled: true } },transform.LoaderOptions]
+                            // }),
+                            use: transform.execution(transform.cssModule, { loader: 'less-loader', options: { javascriptEnabled: true } }),
                             include: [path.join(process.cwd(), 'node_modules/hoolinks-legion-design')],
                         },
                     ];
-                    loaders.push(...newLoaders);
-                } */
+                    newLoaders.map((item) => {
+                        loaders.push(item);
+                    })
+                    
+                }
             },
             /* commonsChunkPlugin:['react','mobx-react','mobx','babel-polyfill','superagent',
                 'react-router-dom','classnames','isomorphic-fetch',
@@ -163,7 +200,7 @@ module.exports = function (configs) {
                      /*  targets: {
                         esmodules: true,
                       }, */
-                      "useBuiltIns": "usage",
+                      "useBuiltIns": "entry", // entry usage  entry模式兼容IE11
                         "corejs": "2",
                         "targets": {
                             "browsers": [ // 浏览器
