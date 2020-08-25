@@ -3,7 +3,7 @@ var packageConfig = require('./package.json');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const webpack = require('webpack');
 const chalk = require('chalk');
-const  path = require('path');
+const path = require('path');
 module.exports = function (configs) {
     configs = Object.assign({}, configs, {
         name: packageConfig.name,
@@ -13,44 +13,35 @@ module.exports = function (configs) {
         isTslint: true,
         //server:'172.16.15.50',
         devServer: Object.assign({},
-            configs.devServer,
-            {
+            configs.devServer, {
                 // proxy: {
-                    // '/v1/oss/uploadByForm': {
-                    //     target: 'https://qa-fc.hoolinks.com',
-                    //     secure: false,
-                    //     onProxyReq: (proxyReq, req, res) => {
-                    //         proxyReq.setHeader('host', 'qa-fc.hoolinks.com');
-                    //     },
-                    // },
+                // '/v1/oss/uploadByForm': {
+                //     target: 'https://qa-fc.hoolinks.com',
+                //     secure: false,
+                //     onProxyReq: (proxyReq, req, res) => {
+                //         proxyReq.setHeader('host', 'qa-fc.hoolinks.com');
+                //     },
+                // },
                 // }
             }),
         apps: ['home'],
         entries: ['src/home/index'],
         webpack: {
             dllConfig: {
-                vendors: [ 'react',
-                'mobx',
-                'mobx-react',
-                'superagent',
-                'react-router-dom',
-                'react-dom',
-                'classnames',
-                'isomorphic-fetch',
-                'history',
-                'invariant',
-                'warning',
-                'hoist-non-react-statics']
+                vendors: ['react',
+                    'mobx',
+                    'mobx-react',
+                    'superagent',
+                    'react-router-dom',
+                    'react-dom',
+                    'classnames',
+                    'isomorphic-fetch',
+                    'history',
+                    'invariant',
+                    'warning',
+                    'hoist-non-react-statics'
+                ]
             },
-            /* tsCompilePlugin: {
-                option: {
-                    getCustomTransformers:() => ({ before: [createTransformer(),createTransformerReactJsxProps({
-                        components: [{ name: 'HLTable',props: 'uniqueUid',value: '' },
-                        { name: 'HLFormContainer',props: 'uniqueUid' },
-                        { name: 'QueryConditions',props: 'uniqueUid' }]
-                    })] })
-                },
-            }, */
             disableReactHotLoader: false,
             cssModules: {
                 enable: true, // 默认false
@@ -63,20 +54,23 @@ module.exports = function (configs) {
                 }),
                 new webpack.NamedChunksPlugin(),
             ],
-            extend: (loaders, { isDev, loaderType, projectType,transform }) => {
+            extend: (loaders, {
+                isDev,
+                loaderType,
+                projectType,
+                transform
+            }) => {
                 // transform = {
                 //     cssModule: CSS_MODULE_OPTION, // 内部css modules 默认值
                 //     LoaderOptions: postcss_loader, // 内部默认加载器参数
                 //     execution: generateLoaders // 内部通用生成loader use 值函数
                 // }
                 if (loaderType === 'StyleLoader' && transform) {
-                    const newLoaders = [
-                        {
-                            test: /\.css/,
-                            use: transform.execution(null, null, null),
-                            include: [path.resolve(process.cwd(), 'node_modules')],
-                        },
-                    ];
+                    const newLoaders = [{
+                        test: /\.css/,
+                        use: transform.execution(null, null, null),
+                        include: [path.resolve(process.cwd(), 'node_modules')],
+                    }, ];
                     loaders.push(...newLoaders);
                 }
             },
@@ -85,7 +79,7 @@ module.exports = function (configs) {
                  'react-dom','history','invariant','warning','hoist-non-react-statics'], */
         },
         htmlWebpackPlugin: {
-            title: "webApp"/*O2O订单管理系统*/,
+            title: "webApp" /*O2O订单管理系统*/ ,
         },
         "postcss": {
             "autoprefixer": {
@@ -100,15 +94,16 @@ module.exports = function (configs) {
                     "react"
                 ],
                 cacheDirectory: '.webpack_cache',
-                plugins:  [
+                plugins: [
                     "add-module-exports",
                     "transform-runtime",
                     "transform-decorators-legacy",
                     [
                         "import",
-                        [
-                            {libraryName: "antd-mobile", style: true}
-                        ]
+                        {
+                            libraryName: "antd-mobile",
+                            style: true
+                        }
                     ]
                 ]
             }
@@ -116,5 +111,3 @@ module.exports = function (configs) {
     });
     return configs;
 };
-
-
