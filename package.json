@@ -1,44 +1,43 @@
 {
-    "name": "project-demo",
-    "version": "0.0.1",
-    "description": "",
-    "main": "",
-    "scripts": {
-      "clean": "rimraf dist/*",
-      "dll": "brain-cli dll",
-      "start": "npm run dev",
-      "dev": "brain-cli dev",
-      "dev:home": "brain-cli dev --apps=home --cssModules=true",
-      "build:uat": "brain-cli build dist --apps=scm --webpackJsonp=webpackJsonpHomeQaName",
-      "build:prod": "brain-cli build prod --apps=scm --webpackJsonp=webpackJsonpHomeQaName",
-      "build:qa": "brain-cli build test --apps=scm --webpackJsonp=webpackJsonpHomeQaName",
-      "build:s": "brain-cli build -s"
-    },
-    "husky": {
-      "hooks": {
-        "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
-      }
-    },
-    "author": "",
-    "license": "",
-    "devDependencies": {
-      "@commitlint/cli": "^7.3.2",
-      "@commitlint/config-conventional": "^7.3.1",
-      "babel-cli": "^6.14.0",
-      "babel-polyfill": "^6.23.0",
-      "brain-cli": "^1.0.6",
-      "husky": "^1.3.1",
-      "rimraf": "^2.5.4"
-    },
-    "dependencies": {
-      "@types/node": "^10.0.0",
-      "@types/react": "^15.6.6",
-      "@types/react-dom": "^0.14.22",
-      "antd-mobile": "^2.3.0",
-      "bundle-loader": "^0.5.5",
-      "json-mapper-object": "^0.0.9",
-      "legions": "^0.1.23",
-      "legions-utils": "^0.0.6"
+  "name": "project-demo",
+  "version": "0.0.1",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "clean": "rimraf dist/*",
+    "dll": "brain-cli dll",
+    "start": "npm run dev",
+    "dev": "brain-cli dev",
+    "dev:home": "brain-cli dev --apps=home --cssModules=true",
+    "build:uat": "brain-cli build dist --apps=scm --webpackJsonp=webpackJsonpHomeQaName",
+    "build:prod": "brain-cli build prod --apps=scm --webpackJsonp=webpackJsonpHomeQaName",
+    "build:qa": "brain-cli build test --apps=scm --webpackJsonp=webpackJsonpHomeQaName",
+    "build:s": "brain-cli build -s"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
     }
+  },
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "@commitlint/cli": "^7.3.2",
+    "@commitlint/config-conventional": "^7.3.1",
+    "babel-cli": "^6.14.0",
+    "babel-polyfill": "^6.23.0",
+    "brain-cli": "^1.0.8-alpha.3",
+    "husky": "^1.3.1",
+    "rimraf": "^2.5.4"
+  },
+  "dependencies": {
+    "@types/node": "^10.0.0",
+    "@types/react": "^16.9.47",
+    "@types/react-dom": "^16.9.8",
+    "antd-mobile": "^2.3.0",
+    "bundle-loader": "^0.5.5",
+    "json-mapper-object": "^0.0.9-rc1",
+    "legions": "1.0.9-beta",
+    "legions-utils": "^0.0.6"
   }
-  
+}
