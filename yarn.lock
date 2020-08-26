@@ -3935,9 +3935,10 @@ home-or-tmp@^2.0.0:
     os-homedir "^1.0.0"
     os-tmpdir "^1.0.1"
 
-hoolinks-legion-design@1.0.52:
-  version "1.0.52"
-  resolved "http://192.168.200.99:4873/hoolinks-legion-design/-/hoolinks-legion-design-1.0.52.tgz#740273e4ce8c938e6e90783832d2be6ed97ccc20"
+hoolinks-legion-design@1.0.56-rc3:
+  version "1.0.56-rc3"
+  resolved "http://192.168.200.99:4873/hoolinks-legion-design/-/hoolinks-legion-design-1.0.56-rc3.tgz#80b5e1857ddee9ebc45888739ce227a6f25bdab9"
+  integrity sha512-iBQ8QseMC1sFYPfGrhQo5Khea5kK0nPo/NDo62yGNlL0xbLppTCSRQ4eZA4KsAeoUroxgfKk9pz/Xbt29IJ5MA==
   dependencies:
     antd "^2.7.4"
     clipboard "^2.0.6"
@@ -3945,7 +3946,6 @@ hoolinks-legion-design@1.0.52:
     html2canvas "^1.0.0-rc.5"
     jsbarcode "^3.11.0"
     json-mapper-object "^0.0.9"
-    legions "^0.1.23"
     legions-utils "0.0.6"
     qr.js "0.0.0"
     raphael "^2.2.6"
@@ -4638,9 +4638,10 @@ json-mapper-object@^0.0.6:
     reflect-metadata "^0.1.3"
     warning "^3.0.0"
 
-json-mapper-object@^0.0.9:
+json-mapper-object@^0.0.9, json-mapper-object@^0.0.9-rc1:
   version "0.0.9"
-  resolved "https://registry.yarnpkg.com/json-mapper-object/-/json-mapper-object-0.0.9.tgz#3865263180a3855e121cbfdafbe8c759a089e038"
+  resolved "http://192.168.200.99:4873/json-mapper-object/-/json-mapper-object-0.0.9.tgz#3865263180a3855e121cbfdafbe8c759a089e038"
+  integrity sha512-M6cYlszrNRsYFH0RRHJlpj1jcam10slUCbx2XL16YqT+6xO6O+QyWupR/l6ghrKHId5UDdtCcjQX8zXCezMyJg==
   dependencies:
     invariant "^2.2.1"
     reflect-metadata "^0.1.3"
@@ -4757,9 +4758,10 @@ legions-utils@0.0.6, legions-utils@^0.0.6:
     object-hash "1.3.0"
     warning "^3.0.0"
 
-legions@^0.1.23:
-  version "0.1.23"
-  resolved "https://registry.yarnpkg.com/legions/-/legions-0.1.23.tgz#2c9e9b5382a6cec92bdaefde846c2ef184291fdf"
+legions@^0.1.24-beta:
+  version "0.1.24"
+  resolved "http://192.168.200.99:4873/legions/-/legions-0.1.24.tgz#c7aa9ab85cd2c36eaf9a3eb5c26cf4073bd13e06"
+  integrity sha512-hWPgBaiB7SLOS/JDgNrtc17XlfV/ZpT6ictfm6of5KuxTWm5T6iz+1b3Ux/HIk6Y3wZE2/Ghh4b0echWv3IOyg==
   dependencies:
     brain-store "^0.1.9"
     brain-store-react "^0.1.9"
