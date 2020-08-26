@@ -1,10 +1,13 @@
-const { createTransformer,createTransformerReactJsxProps } = require('ts-plugin-legions');
+const {
+    createTransformer,
+    createTransformerReactJsxProps
+} = require('ts-plugin-legions');
 const FilterWarningsPlugin = require('webpack-filter-warnings-plugin');
 var packageConfig = require('./package.json');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const webpack = require('webpack');
 const chalk = require('chalk');
-const  path = require('path');
+const path = require('path');
 module.exports = function (configs) {
     configs = Object.assign({}, configs, {
         name: packageConfig.name,
@@ -14,53 +17,85 @@ module.exports = function (configs) {
         isTslint: true,
         //server:'172.16.15.50',
         devServer: Object.assign({},
-            configs.devServer,
-            {
+            configs.devServer, {
                 // proxy: {
-                    // '/v1/oss/uploadByForm': {
-                    //     target: 'https://qa-fc.hoolinks.com',
-                    //     secure: false,
-                    //     onProxyReq: (proxyReq, req, res) => {
-                    //         proxyReq.setHeader('host', 'qa-fc.hoolinks.com');
-                    //     },
-                    // },
+                // '/v1/oss/uploadByForm': {
+                //     target: 'https://qa-fc.hoolinks.com',
+                //     secure: false,
+                //     onProxyReq: (proxyReq, req, res) => {
+                //         proxyReq.setHeader('host', 'qa-fc.hoolinks.com');
+                //     },
+                // },
                 // }
             }),
         apps: ['home'],
         entries: ['src/home/index'],
         webpack: {
             dllConfig: {
-                vendors: [ 'react',
-                'mobx',
-                'mobx-react',
-                'superagent',
-                'react-router-dom',
-                'react-dom',
-                'classnames',
-                'isomorphic-fetch',
-                'history',
-                'invariant',
-                'warning',
-                'hoist-non-react-statics',
-                'sortablejs',
-                'xlsx',
-                "dexie",
-                "html2canvas",
-                "clipboard",
-                "jsbarcode"]
+                vendors: ['react',
+                    'mobx',
+                    'mobx-react',
+                    'superagent',
+                    'react-router-dom',
+                    'react-dom',
+                    'classnames',
+                    'isomorphic-fetch',
+                    'history',
+                    'invariant',
+                    'warning',
+                    'hoist-non-react-statics',
+                    'sortablejs',
+                    'xlsx',
+                    "dexie",
+                    "html2canvas",
+                    "clipboard",
+                    "jsbarcode"
+                ]
             },
+            commonsChunkPlugin: ['hoolinksDesign', 'common', 'vendor'],
             tsCompilePlugin: {
                 option: {
-                    getCustomTransformers:() => ({ before: [createTransformer(),createTransformerReactJsxProps({
-                        components: [{ name: 'HLTable',props: 'uniqueUid',value: '' },
-                        { name: 'HLFormContainer',props: 'uniqueUid' },
-                        { name: 'QueryConditions',props: 'uniqueUid' }]
-                    })] })
+                    getCustomTransformers: () => ({
+                        before: [createTransformer(), createTransformerReactJsxProps({
+                            components: [{
+                                    name: 'HLTable',
+                                    props: 'uniqueUid',
+                                    value: ''
+                                },
+                                {
+                                    name: 'HLFormContainer',
+                                    props: 'uniqueUid'
+                                },
+                                {
+                                    name: 'QueryConditions',
+                                    props: 'uniqueUid'
+                                }
+                            ]
+                        })]
+                    })
                 },
             },
             disableReactHotLoader: false,
             cssModules: {
                 enable: true, // 默认false
+            },
+            cssLoaders: {
+                include: [path.join(process.cwd(), 'node_modules/hoolinks-legion-design')],
+            },
+            optimization: {
+                splitChunks: {
+                    cacheGroups: {
+                        hoolinksDesign: {
+                            chunks: "initial",
+                            minChunks: 1,
+                            name: "hoolinksDesign",
+                            priority: 7,
+                            test: /hoolinks-legion-design/,
+                            //maxInitialRequests: 5, // The default limit is too small to showcase the effect
+                            minSize: 0 // This is example is too small to create commons chunks
+                        },
+                    }
+                },
             },
             plugins: [
                 new ProgressBarPlugin({
@@ -73,7 +108,12 @@ module.exports = function (configs) {
                     exclude: /export .* was not found in/,
                 })
             ],
-            extend: (loaders, { isDev, loaderType, projectType,transform }) => {
+            extend: (loaders, {
+                isDev,
+                loaderType,
+                projectType,
+                transform
+            }) => {
                 /* if (loaderType === 'HotLoader' && isDev) {
                     loaders.push({
                         test: /\.(jsx|js)?$/,
@@ -101,8 +141,12 @@ module.exports = function (configs) {
                 //     execution: generateLoaders // 内部通用生成loader use 值函数
                 // }
                 if (loaderType === 'StyleLoader' && transform) {
-                    const newLoaders = [
-                        {
+                    const newLoaders = [{
+                            test: /\.css$/,
+                            use: transform.execution(null, null, null),
+                            exclude: [path.join(process.cwd(), 'node_modules/hoolinks-legion-design')],
+                            include: [path.join(process.cwd(), 'node_modules')]
+                        }, {
                             test: new RegExp(`^(?!.*\\.modules).*\\.css`),
                             use: transform.execution(null, null, transform.LoaderOptions),
                             include: [path.join(process.cwd(), 'node_modules/hoolinks-legion-design')],
@@ -114,12 +158,22 @@ module.exports = function (configs) {
                         },
                         {
                             test: new RegExp(`^(?!.*\\.modules).*\\.less`),
-                            use: transform.execution(null, 'less-loader', transform.LoaderOptions),
+                            use: transform.execution(null, {
+                                loader: 'less-loader',
+                                options: {
+                                    javascriptEnabled: true
+                                }
+                            }),
                             include: [path.join(process.cwd(), 'node_modules/hoolinks-legion-design')],
                         },
                         {
                             test: new RegExp(`^(.*\\.modules).*\\.less`),
-                            use: transform.execution(transform.cssModule, 'less-loader', transform.LoaderOptions),
+                            use: transform.execution(transform.cssModule, {
+                                loader: 'less-loader',
+                                options: {
+                                    javascriptEnabled: true
+                                }
+                            }),
                             include: [path.join(process.cwd(), 'node_modules/hoolinks-legion-design')],
                         },
                     ];
@@ -131,39 +185,49 @@ module.exports = function (configs) {
                  'react-dom','history','invariant','warning','hoist-non-react-statics'], */
         },
         htmlWebpackPlugin: {
-            title: "webApp"/*O2O订单管理系统*/,
+            title: "webApp" /*O2O订单管理系统*/ ,
         },
         "postcss": {
             "autoprefixer": {
-                "browsers": ['last 2 version', 'safari 5', 'ios 6', 'android 4']
+                "browsers": ['last 2 version', 'safari 5', 'ios 6', 'android 4', 'ie >= 10']
             }
         },
         babel: {
             query: {
                 presets: [
                     [
-                    "@babel/preset-env",
-                    {
-                     /*  targets: {
-                        esmodules: true,
-                      }, */
-                      "useBuiltIns": "usage",
-                      "corejs": "2",
-                    }
-                  ],
-                 /*  "@babel/preset-env", */
-                "@babel/preset-react"],
+                        "@babel/preset-env",
+                        {
+                            /*  targets: {
+                               esmodules: true,
+                             }, */
+                            "useBuiltIns": "entry", // entry usage
+                            "corejs": "2",
+                            "targets": {
+                                "browsers": [ // 浏览器
+                                    "last 2 versions",
+                                    "ie >= 10"
+                                ],
+                            },
+                        }
+                    ],
+                    /*  "@babel/preset-env", */
+                    "@babel/preset-react"
+                ],
                 cacheDirectory: '.webpack_cache',
-                plugins:  [
+                plugins: [
                     'add-module-exports',
-        '@babel/plugin-transform-runtime',
-        ["@babel/plugin-proposal-decorators", { "legacy": true }],
-                    ['import', { libraryName: 'antd', style: true }],
+                    '@babel/plugin-transform-runtime',
+                    ["@babel/plugin-proposal-decorators", {
+                        "legacy": true
+                    }],
+                    ['import', {
+                        libraryName: 'antd',
+                        style: true
+                    }],
                 ]
             }
         }
     });
     return configs;
 };
-
-
