@@ -37,7 +37,7 @@
     "antd-mobile": "^2.3.0",
     "bundle-loader": "^0.5.5",
     "json-mapper-object": "^0.0.9-rc1",
-    "legions": "1.0.9-beta",
+    "legions": "1.0.9-rc.2",
     "legions-utils": "^0.0.6"
   }
 }
