@@ -27,7 +27,7 @@ module.exports = function (configs) {
       // },
       // }
     }),
-    apps: ['home'],
+    apps: ['home', 'demo'],
     entries: ['src/home/index'],
     webpack: {
       dllConfig: {
