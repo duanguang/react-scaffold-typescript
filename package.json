@@ -26,7 +26,7 @@
     "@commitlint/config-conventional": "^7.3.1",
     "babel-cli": "^6.14.0",
     "babel-polyfill": "^6.23.0",
-    "brain-cli": "^1.0.8-alpha.3",
+    "brain-cli": "^1.0.8-alpha.4",
     "husky": "^1.3.1",
     "rimraf": "^2.5.4"
   },
@@ -45,6 +45,10 @@
     "socket.io-client": "^2.2.0",
     "ts-plugin-legions": "^0.0.9",
     "xlsx": "^0.14.4",
-    "dexie": "^2.0.4"
+    "dexie": "^2.0.4",
+    "legions-thirdparty-plugin": "^0.0.8",
+    "legions-lunar": "^0.0.4",
+    "legions-decorator": "^0.0.2",
+    "legions-utils-tool": "^0.0.8"
   }
 }
