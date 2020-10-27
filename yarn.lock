@@ -245,13 +245,6 @@ adjust-sourcemap-loader@^1.1.0:
     object-path "^0.9.2"
     regex-parser "^2.2.9"
 
-adler-32@~1.2.0:
-  version "1.2.0"
-  resolved "https://registry.npm.taobao.org/adler-32/download/adler-32-1.2.0.tgz#6a3e6bf0a63900ba15652808cb15c6813d1a5f25"
-  dependencies:
-    exit-on-epipe "~1.0.1"
-    printj "~1.1.0"
-
 after@0.8.2:
   version "0.8.2"
   resolved "https://registry.npm.taobao.org/after/download/after-0.8.2.tgz#fedb394f9f0e02aa9768e702bda23b505fae7e1f"
@@ -1306,10 +1299,6 @@ base64-arraybuffer@0.1.5:
   version "0.1.5"
   resolved "https://registry.npm.taobao.org/base64-arraybuffer/download/base64-arraybuffer-0.1.5.tgz#73926771923b5a19747ad666aa5cd4bf9c6e9ce8"
 
-base64-arraybuffer@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/base64-arraybuffer/-/base64-arraybuffer-0.2.0.tgz#4b944fac0191aa5907afe2d8c999ccc57ce80f45"
-
 base64-js@^1.0.2:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.3.0.tgz#cab1e6118f051095e58b5281aea8c1cd22bfc0e3"
@@ -1809,15 +1798,6 @@ center-align@^0.1.1:
     align-text "^0.1.3"
     lazy-cache "^1.0.3"
 
-cfb@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.npm.taobao.org/cfb/download/cfb-1.1.2.tgz#5dfff9813eb37757597272dae3da3b37b3edcc44"
-  dependencies:
-    adler-32 "~1.2.0"
-    commander "^2.16.0"
-    crc-32 "~1.2.0"
-    printj "~1.1.2"
-
 chalk@2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.3.1.tgz#523fe2678aec7b04e8041909292fe8b17059b796"
@@ -1934,14 +1914,6 @@ cli-boxes@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/cli-boxes/-/cli-boxes-1.0.0.tgz#4fa917c3e59c94a004cd61f8ee509da651687143"
 
-clipboard@^2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/clipboard/-/clipboard-2.0.6.tgz#52921296eec0fdf77ead1749421b21c968647376"
-  dependencies:
-    good-listener "^1.2.2"
-    select "^1.1.2"
-    tiny-emitter "^2.0.0"
-
 cliui@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/cliui/-/cliui-2.1.0.tgz#4b475760ff80264c762c3a1719032e91c7fea0d1"
@@ -1983,13 +1955,6 @@ coa@~1.0.1:
 code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
-
-codepage@~1.14.0:
-  version "1.14.0"
-  resolved "https://registry.npm.taobao.org/codepage/download/codepage-1.14.0.tgz#8cbe25481323559d7d307571b0fff91e7a1d2f99"
-  dependencies:
-    commander "~2.14.1"
-    exit-on-epipe "~1.0.1"
 
 collection-visit@^1.0.0:
   version "1.0.0"
@@ -2057,14 +2022,6 @@ commander@2.16.x, commander@^2.11.0, commander@~2.16.0:
 commander@^2.12.1, commander@^2.9.0:
   version "2.19.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.19.0.tgz#f6198aa84e5b83c46054b94ddedbfed5ee9ff12a"
-
-commander@^2.16.0:
-  version "2.20.0"
-  resolved "https://registry.npm.taobao.org/commander/download/commander-2.20.0.tgz#d58bb2b5c1ee8f87b0d340027e9e94e222c5a422"
-
-commander@~2.14.1:
-  version "2.14.1"
-  resolved "https://registry.npm.taobao.org/commander/download/commander-2.14.1.tgz#2235123e37af8ca3c65df45b026dbd357b01b9aa"
 
 commander@~2.17.1:
   version "2.17.1"
@@ -2295,13 +2252,6 @@ cosmiconfig@^5.0.7:
     lodash.get "^4.4.2"
     parse-json "^4.0.0"
 
-crc-32@~1.2.0:
-  version "1.2.0"
-  resolved "https://registry.npm.taobao.org/crc-32/download/crc-32-1.2.0.tgz#cb2db6e29b88508e32d9dd0ec1693e7b41a18208"
-  dependencies:
-    exit-on-epipe "~1.0.1"
-    printj "~1.1.0"
-
 create-ecdh@^4.0.0:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/create-ecdh/-/create-ecdh-4.0.3.tgz#c9111b6f33045c4697f144787f9254cdc77c45ff"
@@ -2405,12 +2355,6 @@ css-animation@^1.2.5:
 css-color-names@0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/css-color-names/-/css-color-names-0.0.4.tgz#808adc2e79cf84738069b646cb20ec27beb629e0"
-
-css-line-break@1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/css-line-break/-/css-line-break-1.1.1.tgz#d5e9bdd297840099eb0503c7310fd34927a026ef"
-  dependencies:
-    base64-arraybuffer "^0.2.0"
 
 css-loader@^0.28.0:
   version "0.28.11"
@@ -2657,10 +2601,6 @@ delayed-stream@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
 
-delegate@^3.1.2:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/delegate/-/delegate-3.2.0.tgz#b66b71c3158522e8ab5744f720d8ca0c2af59166"
-
 delegates@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delegates/-/delegates-1.0.0.tgz#84c6e159b81904fdca59a0ef44cd870d31250f9a"
@@ -2697,10 +2637,6 @@ detect-libc@^1.0.2:
 detect-node@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/detect-node/-/detect-node-2.0.3.tgz#a2033c09cc8e158d37748fbde7507832bd6ce127"
-
-dexie@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/dexie/-/dexie-2.0.4.tgz#6027a5e05879424e8f9979d8c14e7420f27e3a11"
 
 diff@^3.2.0:
   version "3.5.0"
@@ -3059,10 +2995,6 @@ etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
 
-eve-raphael@0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/eve-raphael/-/eve-raphael-0.5.0.tgz#17c754b792beef3fa6684d79cf5a47c63c4cda30"
-
 eventemitter3@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-3.1.0.tgz#090b4d6cdbd645ed10bf750d4b5407942d7ba163"
@@ -3111,10 +3043,6 @@ execa@^1.0.0:
     p-finally "^1.0.0"
     signal-exit "^3.0.0"
     strip-eof "^1.0.0"
-
-exit-on-epipe@~1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npm.taobao.org/exit-on-epipe/download/exit-on-epipe-1.0.1.tgz#0bdd92e87d5285d267daa8171d0eb06159689692"
 
 expand-brackets@^0.1.4:
   version "0.1.5"
@@ -3478,10 +3406,6 @@ forwarded@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.1.2.tgz#98c23dab1175657b8c0573e8ceccd91b0ff18c84"
 
-frac@~1.1.2:
-  version "1.1.2"
-  resolved "https://registry.npm.taobao.org/frac/download/frac-1.1.2.tgz#3d74f7f6478c88a1b5020306d747dc6313c74d0b"
-
 fragment-cache@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/fragment-cache/-/fragment-cache-0.2.1.tgz#4290fad27f13e89be7f33799c6bc5a0abfff0d19"
@@ -3717,12 +3641,6 @@ globule@^1.0.0:
     lodash "~4.17.10"
     minimatch "~3.0.2"
 
-good-listener@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/good-listener/-/good-listener-1.2.2.tgz#d53b30cdf9313dffb7dc9a0d477096aa6d145c50"
-  dependencies:
-    delegate "^3.1.2"
-
 got@^6.7.1:
   version "6.7.1"
   resolved "https://registry.yarnpkg.com/got/-/got-6.7.1.tgz#240cd05785a9a18e561dc1b44b41c763ef1e8db0"
@@ -3935,26 +3853,6 @@ home-or-tmp@^2.0.0:
     os-homedir "^1.0.0"
     os-tmpdir "^1.0.1"
 
-hoolinks-legion-design@1.0.56-rc3:
-  version "1.0.56-rc3"
-  resolved "http://192.168.200.99:4873/hoolinks-legion-design/-/hoolinks-legion-design-1.0.56-rc3.tgz#80b5e1857ddee9ebc45888739ce227a6f25bdab9"
-  integrity sha512-iBQ8QseMC1sFYPfGrhQo5Khea5kK0nPo/NDo62yGNlL0xbLppTCSRQ4eZA4KsAeoUroxgfKk9pz/Xbt29IJ5MA==
-  dependencies:
-    antd "^2.7.4"
-    clipboard "^2.0.6"
-    dexie "^2.0.4"
-    html2canvas "^1.0.0-rc.5"
-    jsbarcode "^3.11.0"
-    json-mapper-object "^0.0.9"
-    legions-utils "0.0.6"
-    qr.js "0.0.0"
-    raphael "^2.2.6"
-    react-raphael "^0.9.0"
-    socket.io-client "^2.2.0"
-    sortablejs "^1.10.0-rc3"
-    ts-plugin-legions "^0.0.9"
-    xlsx "^0.14.4"
-
 hoolinks@^0.1.5:
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/hoolinks/-/hoolinks-0.1.5.tgz#42cb980c91e5a2aa360e93221677902f7e9a2b08"
@@ -4017,12 +3915,6 @@ html-webpack-plugin@^2.28.0:
 html-webpack-template@^6.0.1:
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/html-webpack-template/-/html-webpack-template-6.2.0.tgz#3c9f15f616f4500927909d34adfbccb20d37943c"
-
-html2canvas@^1.0.0-rc.5:
-  version "1.0.0-rc.5"
-  resolved "https://registry.yarnpkg.com/html2canvas/-/html2canvas-1.0.0-rc.5.tgz#4ee3cac9f6e20a0fa0c2f35a6f99c960ae7ec4c1"
-  dependencies:
-    css-line-break "1.1.1"
 
 htmlparser2@~3.3.0:
   version "3.3.0"
@@ -4606,10 +4498,6 @@ js-yaml@~3.7.0:
     argparse "^1.0.7"
     esprima "^2.6.0"
 
-jsbarcode@^3.11.0:
-  version "3.11.0"
-  resolved "https://registry.yarnpkg.com/jsbarcode/-/jsbarcode-3.11.0.tgz#20623e008b101ef45d0cce9c8022cdf49be28547"
-
 jsbn@~0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/jsbn/-/jsbn-0.1.1.tgz#a5e654c2e5a2deb5f201d96cefbca80c0ef2f513"
@@ -4750,7 +4638,34 @@ lcid@^1.0.0:
   dependencies:
     invert-kv "^1.0.0"
 
-legions-utils@0.0.6, legions-utils@^0.0.6:
+legions-decorator@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/legions-decorator/-/legions-decorator-0.0.4.tgz#a1d4853b29b32da10eee1d76dabf9f63b4587bed"
+  integrity sha512-eDvFVmkClc4L0DKwlfTV9RW/ajWJNb78AeMumMYnLRgquc9I0XQ33UbY1SOv1iKiXybxVcI3TIKbhF+vTscKbg==
+  dependencies:
+    legions-utils-tool "^0.0.8"
+    reflect-metadata "^0.1.13"
+    warning "^3.0.0"
+
+legions-lunar@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/legions-lunar/-/legions-lunar-0.0.5.tgz#378b06ee5a25bb19ad201c374df89635bb9f8c9b"
+  integrity sha512-HSbk4QpNBm7HDTJwReGQ2sRNzfK6v4jxdxJGvuPyCBNQLP8tdGpvjDAP9seMv8bUf9At6woVvbU0g48+SqKFhA==
+  dependencies:
+    legions-thirdparty-plugin "^0.0.8"
+    warning "^3.0.0"
+
+legions-thirdparty-plugin@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/legions-thirdparty-plugin/-/legions-thirdparty-plugin-0.0.8.tgz#b5a683c58fc6d0bd2a8a155015ad9a2e4ec277e4"
+  integrity sha512-RTQmRZ4/2hmis7Twa+FIDhxQq0L4b7AUxFOyIz00NI9xGX2Z3zFr2nU6tcFL3Ybui7MOX7vMT2breP6fOt5Gpg==
+
+legions-utils-tool@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/legions-utils-tool/-/legions-utils-tool-0.0.8.tgz#c58cb1e5ca4e4b6754913474fb401163c46ec116"
+  integrity sha512-rahA2EAA0QmEmDbrutlrvB9fRuxEb2Q6dsqkmTJBmvaBqgL0Hd6R+gqDgHhs/l2KTVNVAbK+ITT5ddagxCiSKA==
+
+legions-utils@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/legions-utils/-/legions-utils-0.0.6.tgz#f1726f786d3435ddaa1cdfbe5650b1c4ac1f31d3"
   dependencies:
@@ -6309,10 +6224,6 @@ pretty-error@^2.0.2:
     renderkid "^2.0.1"
     utila "~0.4"
 
-printj@~1.1.0, printj@~1.1.2:
-  version "1.1.2"
-  resolved "https://registry.npm.taobao.org/printj/download/printj-1.1.2.tgz#d90deb2975a8b9f600fb3a1c94e3f4c53c78a222"
-
 private@^0.1.6, private@^0.1.8:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
@@ -6425,10 +6336,6 @@ q@^1.1.2, q@^1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
 
-qr.js@0.0.0:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/qr.js/-/qr.js-0.0.0.tgz#cace86386f59a0db8050fa90d9b6b0e88a1e364f"
-
 qs@6.5.1:
   version "6.5.1"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.1.tgz#349cdf6eef89ec45c12d7d5eb3fc0c870343a6d8"
@@ -6501,12 +6408,6 @@ randomfill@^1.0.3:
 range-parser@^1.0.3, range-parser@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/range-parser/-/range-parser-1.2.0.tgz#f49be6b487894ddc40dcc94a322f611092e00d5e"
-
-raphael@^2.2.6:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/raphael/-/raphael-2.3.0.tgz#eabeb09dba861a1d4cee077eaafb8c53f3131f89"
-  dependencies:
-    eve-raphael "0.5.0"
 
 raw-body@2.3.2:
   version "2.3.2"
@@ -6937,10 +6838,6 @@ react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
 
-react-raphael@^0.9.0:
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/react-raphael/-/react-raphael-0.9.0.tgz#36a2353641b83e68f323089d747a150a13f052cf"
-
 react-router-dom@^4.0.0:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-4.3.1.tgz#4c2619fc24c4fa87c9fd18f4fb4a43fe63fbd5c6"
@@ -7110,6 +7007,11 @@ reduce-function-call@^1.0.1:
   resolved "https://registry.yarnpkg.com/reduce-function-call/-/reduce-function-call-1.0.2.tgz#5a200bf92e0e37751752fe45b0ab330fd4b6be99"
   dependencies:
     balanced-match "^0.4.2"
+
+reflect-metadata@^0.1.13:
+  version "0.1.13"
+  resolved "https://registry.yarnpkg.com/reflect-metadata/-/reflect-metadata-0.1.13.tgz#67ae3ca57c972a2aa1642b10fe363fe32d49dc08"
+  integrity sha512-Ts1Y/anZELhSsjMcU605fU9RE4Oi3p5ORujwbIKXfWa+0Zxs510Qrmrce5/Jowq3cHSZSJqBjypxmHarc+vEWg==
 
 reflect-metadata@^0.1.3:
   version "0.1.12"
@@ -7440,10 +7342,6 @@ schema-utils@^0.3.0:
 select-hose@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/select-hose/-/select-hose-2.0.0.tgz#625d8658f865af43ec962bfc376a37359a4994ca"
-
-select@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/select/-/select-1.1.2.tgz#0e7350acdec80b1108528786ec1d4418d11b396d"
 
 selfsigned@^1.9.1:
   version "1.10.3"
@@ -7854,12 +7752,6 @@ spritesmith@^3.3.1:
     semver "~5.0.3"
     through2 "~2.0.0"
 
-ssf@~0.10.2:
-  version "0.10.2"
-  resolved "https://registry.npm.taobao.org/ssf/download/ssf-0.10.2.tgz#65b2b4fcdfd967bc8e8383a41349009893115976"
-  dependencies:
-    frac "~1.1.2"
-
 sshpk@^1.7.0:
   version "1.14.2"
   resolved "https://registry.yarnpkg.com/sshpk/-/sshpk-1.14.2.tgz#c6fc61648a3d9c4e764fd3fcdf4ea105e492ba98"
@@ -8174,10 +8066,6 @@ timers-browserify@^2.0.4:
   resolved "https://registry.yarnpkg.com/timers-browserify/-/timers-browserify-2.0.10.tgz#1d28e3d2aadf1d5a5996c4e9f95601cd053480ae"
   dependencies:
     setimmediate "^1.0.4"
-
-tiny-emitter@^2.0.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/tiny-emitter/-/tiny-emitter-2.1.0.tgz#1d1a56edfc51c43e863cbb5382a72330e3555423"
 
 to-array@0.1.4:
   version "0.1.4"
@@ -8850,18 +8738,6 @@ ws@~6.1.0:
 xdg-basedir@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/xdg-basedir/-/xdg-basedir-3.0.0.tgz#496b2cc109eca8dbacfe2dc72b603c17c5870ad4"
-
-xlsx@^0.14.4:
-  version "0.14.4"
-  resolved "https://registry.npm.taobao.org/xlsx/download/xlsx-0.14.4.tgz#7c2ccfce81d56282df55d0cea76722ef83986c02"
-  dependencies:
-    adler-32 "~1.2.0"
-    cfb "^1.1.2"
-    codepage "~1.14.0"
-    commander "~2.17.1"
-    crc-32 "~1.2.0"
-    exit-on-epipe "~1.0.1"
-    ssf "~0.10.2"
 
 xmlhttprequest-ssl@~1.5.4:
   version "1.5.5"
