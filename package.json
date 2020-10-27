@@ -37,7 +37,6 @@
     "bundle-loader": "^0.5.5",
     "json-mapper-object": "^0.0.9-rc1",
     "hoolinks": "^0.1.5",
-    "hoolinks-legion-design": "1.0.56-rc3",
     "legions": "1.0.9-beta",
     "legions-utils": "^0.0.6",
     "sortablejs": "^1.10.0-rc3",
