@@ -1799,7 +1799,7 @@ adjust-sourcemap-loader@^1.1.0:
 
 after@0.8.2:
   version "0.8.2"
-  resolved "http://192.168.200.99:4873/after/-/after-0.8.2.tgz#fedb394f9f0e02aa9768e702bda23b505fae7e1f"
+  resolved "http://registry.yarnpkg.com/after/-/after-0.8.2.tgz#fedb394f9f0e02aa9768e702bda23b505fae7e1f"
   integrity sha1-/ts5T58OAqqXaOcCvaI7UF+ufh8=
 
 aggregate-error@^3.0.0:
@@ -2017,7 +2017,7 @@ array-unique@^0.3.2:
 
 arraybuffer.slice@~0.0.7:
   version "0.0.7"
-  resolved "http://192.168.200.99:4873/arraybuffer.slice/-/arraybuffer.slice-0.0.7.tgz#3bbc4275dd584cc1b10809b89d4e8b63a69e7675"
+  resolved "http://registry.yarnpkg.com/arraybuffer.slice/-/arraybuffer.slice-0.0.7.tgz#3bbc4275dd584cc1b10809b89d4e8b63a69e7675"
   integrity sha512-wGUIVQXuehL5TCqQun8OW81jGzAWycqzFF8lFp+GOM5BXLYj3bKNsYC4daB7n6XjCqxQA/qgTJ+8ANR3acjrog==
 
 arrify@^1.0.1:
@@ -2297,7 +2297,7 @@ babylon@^6.18.0:
 
 backo2@1.0.2:
   version "1.0.2"
-  resolved "http://192.168.200.99:4873/backo2/-/backo2-1.0.2.tgz#31ab1ac8b129363463e35b3ebb69f4dfcfba7947"
+  resolved "http://registry.yarnpkg.com/backo2/-/backo2-1.0.2.tgz#31ab1ac8b129363463e35b3ebb69f4dfcfba7947"
   integrity sha1-MasayLEpNjRj41s+u2n038+6eUc=
 
 balanced-match@^1.0.0:
@@ -2306,7 +2306,7 @@ balanced-match@^1.0.0:
 
 base64-arraybuffer@0.1.4:
   version "0.1.4"
-  resolved "http://192.168.200.99:4873/base64-arraybuffer/-/base64-arraybuffer-0.1.4.tgz#9818c79e059b1355f97e0428a017c838e90ba812"
+  resolved "http://registry.yarnpkg.com/base64-arraybuffer/-/base64-arraybuffer-0.1.4.tgz#9818c79e059b1355f97e0428a017c838e90ba812"
   integrity sha1-mBjHngWbE1X5fgQooBfIOOkLqBI=
 
 base64-js@^1.0.2:
@@ -2376,7 +2376,7 @@ bindings@^1.5.0:
 
 blob@0.0.5:
   version "0.0.5"
-  resolved "http://192.168.200.99:4873/blob/-/blob-0.0.5.tgz#d680eeef25f8cd91ad533f5b01eed48e64caf683"
+  resolved "http://registry.yarnpkg.com/blob/-/blob-0.0.5.tgz#d680eeef25f8cd91ad533f5b01eed48e64caf683"
   integrity sha512-gaqbzQPqOoamawKg0LGVd7SzLgXS+JH61oWprSLH+P+abTczqJbhTR8CmJ2u9/bUYNmHTGJx/UEmn6doAvvuig==
 
 bluebird@^3.5.5:
@@ -2543,7 +2543,7 @@ brain-store-react@^1.0.2:
 
 brain-store-utils@^0.1.13-beta.3:
   version "0.1.13-beta.3"
-  resolved "http://192.168.200.99:4873/brain-store-utils/-/brain-store-utils-0.1.13-beta.3.tgz#71b762da547b31254282a39d69d52311a3e3e822"
+  resolved "http://registry.yarnpkg.com/brain-store-utils/-/brain-store-utils-0.1.13-beta.3.tgz#71b762da547b31254282a39d69d52311a3e3e822"
   integrity sha512-KukbbXbLXMqFZp/nKjHzqVBBpsTSw3MWTuwjaYwetnWxQ0xmhJxoTohFcZyGFcHmd8RQPaRqj+3xNa5T68drkA==
   dependencies:
     invariant "^2.2.1"
@@ -2551,7 +2551,7 @@ brain-store-utils@^0.1.13-beta.3:
 
 brain-store@^0.1.10-rc.1:
   version "0.1.10-rc.1"
-  resolved "http://192.168.200.99:4873/brain-store/-/brain-store-0.1.10-rc.1.tgz#b518b7a20010e204e83bee14fd63efd468b2ba76"
+  resolved "http://registry.yarnpkg.com/brain-store/-/brain-store-0.1.10-rc.1.tgz#b518b7a20010e204e83bee14fd63efd468b2ba76"
   integrity sha512-0vYmr8iMpGGi5ghs1q+Ikwm8Jiuqrcl1HNYZ6keiPEoXhFHkVXALyBKPImbxlhNMeMsuFcWSwvu1fuEe+W7c+Q==
   dependencies:
     invariant "^2.2.1"
@@ -2561,7 +2561,7 @@ brain-store@^0.1.10-rc.1:
 
 brain-store@^1.0.4:
   version "1.0.4"
-  resolved "http://192.168.200.99:4873/brain-store/-/brain-store-1.0.4.tgz#65526110e9ed8b597959d8fcd222e353825331de"
+  resolved "http://registry.yarnpkg.com/brain-store/-/brain-store-1.0.4.tgz#65526110e9ed8b597959d8fcd222e353825331de"
   integrity sha512-AXP4PHNgpIjJ1qNSBdR3cCRvGtF1uUOk1xzQT9YN8dcnCxtqn1sw6gC7tG0c2ozmXuQXmFj1IqhoobtcQM4gYA==
   dependencies:
     invariant "^2.2.1"
@@ -2572,7 +2572,7 @@ brain-store@^1.0.4:
 
 brains@^1.0.3-beta.1:
   version "1.0.3"
-  resolved "http://192.168.200.99:4873/brains/-/brains-1.0.3.tgz#ede3099e1b2378d52fa5f2dec12f66fa3931a8cd"
+  resolved "http://registry.yarnpkg.com/brains/-/brains-1.0.3.tgz#ede3099e1b2378d52fa5f2dec12f66fa3931a8cd"
   integrity sha512-4pzLq+KgQcl6lLTZIre+Xdi7Np74OFDDo7KNbochb8HxaIUKBXXKxmhR36if11JgEjfd3Kk/0OoyxVQYV4dDcw==
   dependencies:
     brain-store "^1.0.4"
@@ -3109,7 +3109,7 @@ compare-func@^1.3.1:
 
 component-bind@1.0.0:
   version "1.0.0"
-  resolved "http://192.168.200.99:4873/component-bind/-/component-bind-1.0.0.tgz#00c608ab7dcd93897c0009651b1d3a8e1e73bbd1"
+  resolved "http://registry.yarnpkg.com/component-bind/-/component-bind-1.0.0.tgz#00c608ab7dcd93897c0009651b1d3a8e1e73bbd1"
   integrity sha1-AMYIq33Nk4l8AAllGx06jh5zu9E=
 
 component-classes@^1.2.5:
@@ -3124,7 +3124,7 @@ component-emitter@^1.2.0, component-emitter@^1.2.1:
 
 component-emitter@~1.3.0:
   version "1.3.0"
-  resolved "http://192.168.200.99:4873/component-emitter/-/component-emitter-1.3.0.tgz#16e4070fba8ae29b679f2215853ee181ab2eabc0"
+  resolved "http://registry.yarnpkg.com/component-emitter/-/component-emitter-1.3.0.tgz#16e4070fba8ae29b679f2215853ee181ab2eabc0"
   integrity sha512-Rd3se6QB+sO1TwqZjscQrurpEPIfO0/yYnSin6Q/rD3mOutHvUrCAhJub3r90uNb+SESBuE0QYoB90YdfatsRg==
 
 component-indexof@0.0.3:
@@ -3133,7 +3133,7 @@ component-indexof@0.0.3:
 
 component-inherit@0.0.3:
   version "0.0.3"
-  resolved "http://192.168.200.99:4873/component-inherit/-/component-inherit-0.0.3.tgz#645fc4adf58b72b649d5cae65135619db26ff143"
+  resolved "http://registry.yarnpkg.com/component-inherit/-/component-inherit-0.0.3.tgz#645fc4adf58b72b649d5cae65135619db26ff143"
   integrity sha1-ZF/ErfWLcrZJ1crmUTVhnbJv8UM=
 
 compressible@~2.0.16:
@@ -4029,7 +4029,7 @@ end-of-stream@^1.0.0, end-of-stream@^1.1.0:
 
 engine.io-client@~3.4.0:
   version "3.4.4"
-  resolved "http://192.168.200.99:4873/engine.io-client/-/engine.io-client-3.4.4.tgz#77d8003f502b0782dd792b073a4d2cf7ca5ab967"
+  resolved "http://registry.yarnpkg.com/engine.io-client/-/engine.io-client-3.4.4.tgz#77d8003f502b0782dd792b073a4d2cf7ca5ab967"
   integrity sha512-iU4CRr38Fecj8HoZEnFtm2EiKGbYZcPn3cHxqNGl/tmdWRf60KhK+9vE0JeSjgnlS/0oynEfLgKbT9ALpim0sQ==
   dependencies:
     component-emitter "~1.3.0"
@@ -4046,7 +4046,7 @@ engine.io-client@~3.4.0:
 
 engine.io-parser@~2.2.0:
   version "2.2.1"
-  resolved "http://192.168.200.99:4873/engine.io-parser/-/engine.io-parser-2.2.1.tgz#57ce5611d9370ee94f99641b589f94c97e4f5da7"
+  resolved "http://registry.yarnpkg.com/engine.io-parser/-/engine.io-parser-2.2.1.tgz#57ce5611d9370ee94f99641b589f94c97e4f5da7"
   integrity sha512-x+dN/fBH8Ro8TFwJ+rkB2AmuVw9Yu2mockR/p3W8f8YtExwFgDvBDi0GWyb4ZLkpahtDGZgtr3zLovanJghPqg==
   dependencies:
     after "0.8.2"
@@ -4982,14 +4982,14 @@ has-ansi@^2.0.0:
 
 has-binary2@~1.0.2:
   version "1.0.3"
-  resolved "http://192.168.200.99:4873/has-binary2/-/has-binary2-1.0.3.tgz#7776ac627f3ea77250cfc332dab7ddf5e4f5d11d"
+  resolved "http://registry.yarnpkg.com/has-binary2/-/has-binary2-1.0.3.tgz#7776ac627f3ea77250cfc332dab7ddf5e4f5d11d"
   integrity sha512-G1LWKhDSvhGeAQ8mPVQlqNcOB2sJdwATtZKl2pDKKHfpf/rYj24lkinxf69blJbnsvtqqNU+L3SL50vzZhXOnw==
   dependencies:
     isarray "2.0.1"
 
 has-cors@1.1.0:
   version "1.1.0"
-  resolved "http://192.168.200.99:4873/has-cors/-/has-cors-1.1.0.tgz#5e474793f7ea9843d1bb99c23eef49ff126fff39"
+  resolved "http://registry.yarnpkg.com/has-cors/-/has-cors-1.1.0.tgz#5e474793f7ea9843d1bb99c23eef49ff126fff39"
   integrity sha1-XkdHk/fqmEPRu5nCPu9J/xJv/zk=
 
 has-flag@^3.0.0:
@@ -5384,7 +5384,7 @@ indexes-of@^1.0.1:
 
 indexof@0.0.1:
   version "0.0.1"
-  resolved "http://192.168.200.99:4873/indexof/-/indexof-0.0.1.tgz#82dc336d232b9062179d05ab3293a66059fd435d"
+  resolved "http://registry.yarnpkg.com/indexof/-/indexof-0.0.1.tgz#82dc336d232b9062179d05ab3293a66059fd435d"
   integrity sha1-gtwzbSMrkGIXnQWrMpOmYFn9Q10=
 
 infer-owner@^1.0.3, infer-owner@^1.0.4:
@@ -5793,7 +5793,7 @@ isarray@1.0.0, isarray@^1.0.0, isarray@~1.0.0:
 
 isarray@2.0.1:
   version "2.0.1"
-  resolved "http://192.168.200.99:4873/isarray/-/isarray-2.0.1.tgz#a37d94ed9cda2d59865c9f76fe596ee1f338741e"
+  resolved "http://registry.yarnpkg.com/isarray/-/isarray-2.0.1.tgz#a37d94ed9cda2d59865c9f76fe596ee1f338741e"
   integrity sha1-o32U7ZzaLVmGXJ92/llu4fM4dB4=
 
 isexe@^2.0.0:
@@ -5990,36 +5990,32 @@ layout@~2.2.0:
   dependencies:
     bin-pack "~1.0.1"
 
-legions-decorator@^0.0.2:
-  version "0.0.2"
-  resolved "http://192.168.200.99:4873/legions-decorator/-/legions-decorator-0.0.2.tgz#4eda9c7d805fe1b24eb0790f406ac46d799e226a"
-  integrity sha512-NeQDBYVCfPN7eGG5jdVTbBrUez9AMbge6R49Q3OM5ezjeHe55hROCzIMB2eGQAnKq7mOcufV/MsZTmwpnvANlw==
+legions-decorator@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/legions-decorator/-/legions-decorator-0.0.4.tgz#a1d4853b29b32da10eee1d76dabf9f63b4587bed"
+  integrity sha512-eDvFVmkClc4L0DKwlfTV9RW/ajWJNb78AeMumMYnLRgquc9I0XQ33UbY1SOv1iKiXybxVcI3TIKbhF+vTscKbg==
   dependencies:
-    legions-utils-tool "^0.0.6"
+    legions-utils-tool "^0.0.8"
     reflect-metadata "^0.1.13"
     warning "^3.0.0"
 
-legions-lunar@^0.0.4:
-  version "0.0.4"
-  resolved "http://192.168.200.99:4873/legions-lunar/-/legions-lunar-0.0.4.tgz#203d703c386733c0ce01bd7e1839ebb97b7ec35d"
-  integrity sha512-iKyJSPPHhm+nu9e0GerAlCEG/BEfltxZz2v1ZJRUhJr4yJoEidh2nHSblbPYakIx/c4uSExC1BGHbsU/7gUAbw==
+legions-lunar@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/legions-lunar/-/legions-lunar-0.0.5.tgz#378b06ee5a25bb19ad201c374df89635bb9f8c9b"
+  integrity sha512-HSbk4QpNBm7HDTJwReGQ2sRNzfK6v4jxdxJGvuPyCBNQLP8tdGpvjDAP9seMv8bUf9At6woVvbU0g48+SqKFhA==
   dependencies:
+    legions-thirdparty-plugin "^0.0.8"
     warning "^3.0.0"
 
-legions-thirdparty-plugin@^0.0.7:
-  version "0.0.7"
-  resolved "http://192.168.200.99:4873/legions-thirdparty-plugin/-/legions-thirdparty-plugin-0.0.7.tgz#276ff83d2adb6bf24cb286d3d3e56c6c92d9ed61"
-  integrity sha512-VkSTNLf4wH6h3Y+HOoC9SNR4/oz8FR72fx2WfE6/ftBlaT0PDbNPzFntX97b2eeMNO9cWm2eUsz0twaBxabkqA==
-
-legions-utils-tool@^0.0.6:
-  version "0.0.6"
-  resolved "http://192.168.200.99:4873/legions-utils-tool/-/legions-utils-tool-0.0.6.tgz#d052d83d277fdcf5eb44ef12c676faa90eda52d8"
-  integrity sha512-NK2Gva6EQz9CQVgTqvoChiB1zb3VYcx077l2eU/NLoErid5LsAk3R6ljikc4HkmIp9gkkR8bT9+CQWW4baB1Sw==
+legions-thirdparty-plugin@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/legions-thirdparty-plugin/-/legions-thirdparty-plugin-0.0.8.tgz#b5a683c58fc6d0bd2a8a155015ad9a2e4ec277e4"
+  integrity sha512-RTQmRZ4/2hmis7Twa+FIDhxQq0L4b7AUxFOyIz00NI9xGX2Z3zFr2nU6tcFL3Ybui7MOX7vMT2breP6fOt5Gpg==
 
 legions-utils-tool@^0.0.8:
   version "0.0.8"
-  resolved "http://192.168.200.99:4873/legions-utils-tool/-/legions-utils-tool-0.0.8.tgz#526dda43e78e070c0ca221cd57645b2723632b82"
-  integrity sha512-aq+Y59ufQWcKKRQmPe9vujd5oRhtQhQ9a4Ni3ERAagg9fP/vfS9AQ7ZGB81i7CQZtT44XNTQoO7uQs7seEnQWw==
+  resolved "https://registry.yarnpkg.com/legions-utils-tool/-/legions-utils-tool-0.0.8.tgz#c58cb1e5ca4e4b6754913474fb401163c46ec116"
+  integrity sha512-rahA2EAA0QmEmDbrutlrvB9fRuxEb2Q6dsqkmTJBmvaBqgL0Hd6R+gqDgHhs/l2KTVNVAbK+ITT5ddagxCiSKA==
 
 legions-utils@^0.0.6:
   version "0.0.6"
@@ -6031,7 +6027,7 @@ legions-utils@^0.0.6:
 
 legions@1.0.9-rc.2:
   version "1.0.9-rc.2"
-  resolved "http://192.168.200.99:4873/legions/-/legions-1.0.9-rc.2.tgz#42b87e86c88bae6221231161e119276728e76664"
+  resolved "http://registry.yarnpkg.com/legions/-/legions-1.0.9-rc.2.tgz#42b87e86c88bae6221231161e119276728e76664"
   integrity sha512-HT6JUhsLLrb5E5kVhZigs7KdIEPjZ4Me7Uk9Roe14apIKc+VAjtYSOCpBri1qzygL4nb++nh6hDG4W1UFHJ4yQ==
   dependencies:
     brain-store "^0.1.10-rc.1"
@@ -7278,12 +7274,12 @@ parse-passwd@^1.0.0:
 
 parseqs@0.0.6:
   version "0.0.6"
-  resolved "http://192.168.200.99:4873/parseqs/-/parseqs-0.0.6.tgz#8e4bb5a19d1cdc844a08ac974d34e273afa670d5"
+  resolved "http://registry.yarnpkg.com/parseqs/-/parseqs-0.0.6.tgz#8e4bb5a19d1cdc844a08ac974d34e273afa670d5"
   integrity sha512-jeAGzMDbfSHHA091hr0r31eYfTig+29g3GKKE/PPbEQ65X0lmMwlEoqmhzu0iztID5uJpZsFlUPDP8ThPL7M8w==
 
 parseuri@0.0.6:
   version "0.0.6"
-  resolved "http://192.168.200.99:4873/parseuri/-/parseuri-0.0.6.tgz#e1496e829e3ac2ff47f39a4dd044b32823c4a25a"
+  resolved "http://registry.yarnpkg.com/parseuri/-/parseuri-0.0.6.tgz#e1496e829e3ac2ff47f39a4dd044b32823c4a25a"
   integrity sha512-AUjen8sAkGgao7UyCX6Ahv0gIK2fABKmYjvP4xmy5JaKvcbTRueIqIPHLAfq30xJddqSE033IOMUSOMCcK3Sow==
 
 parseurl@~1.3.2:
@@ -8350,7 +8346,7 @@ redent@^2.0.0:
 
 reflect-metadata@^0.1.13:
   version "0.1.13"
-  resolved "http://192.168.200.99:4873/reflect-metadata/-/reflect-metadata-0.1.13.tgz#67ae3ca57c972a2aa1642b10fe363fe32d49dc08"
+  resolved "http://registry.yarnpkg.com/reflect-metadata/-/reflect-metadata-0.1.13.tgz#67ae3ca57c972a2aa1642b10fe363fe32d49dc08"
   integrity sha512-Ts1Y/anZELhSsjMcU605fU9RE4Oi3p5ORujwbIKXfWa+0Zxs510Qrmrce5/Jowq3cHSZSJqBjypxmHarc+vEWg==
 
 reflect-metadata@^0.1.3:
@@ -9102,7 +9098,7 @@ snapdragon@^0.8.1:
 
 socket.io-client@^2.2.0:
   version "2.3.1"
-  resolved "http://192.168.200.99:4873/socket.io-client/-/socket.io-client-2.3.1.tgz#91a4038ef4d03c19967bb3c646fec6e0eaa78cff"
+  resolved "http://registry.yarnpkg.com/socket.io-client/-/socket.io-client-2.3.1.tgz#91a4038ef4d03c19967bb3c646fec6e0eaa78cff"
   integrity sha512-YXmXn3pA8abPOY//JtYxou95Ihvzmg8U6kQyolArkIyLd0pgVhrfor/iMsox8cn07WCOOvvuJ6XKegzIucPutQ==
   dependencies:
     backo2 "1.0.2"
@@ -9119,7 +9115,7 @@ socket.io-client@^2.2.0:
 
 socket.io-parser@~3.3.0:
   version "3.3.1"
-  resolved "http://192.168.200.99:4873/socket.io-parser/-/socket.io-parser-3.3.1.tgz#f07d9c8cb3fb92633aa93e76d98fd3a334623199"
+  resolved "http://registry.yarnpkg.com/socket.io-parser/-/socket.io-parser-3.3.1.tgz#f07d9c8cb3fb92633aa93e76d98fd3a334623199"
   integrity sha512-1QLvVAe8dTz+mKmZ07Swxt+LAo4Y1ff50rlyoEx00TQmDFVQYPfcqGvIDJLGaBdhdNCecXtyKpD+EgKGcmmbuQ==
   dependencies:
     component-emitter "~1.3.0"
@@ -9155,7 +9151,7 @@ sort-keys@^1.0.0:
 
 sortablejs@^1.10.0-rc3:
   version "1.12.0"
-  resolved "http://192.168.200.99:4873/sortablejs/-/sortablejs-1.12.0.tgz#ee6d7ece3598c2af0feb1559d98595e5ea37cbd6"
+  resolved "http://registry.yarnpkg.com/sortablejs/-/sortablejs-1.12.0.tgz#ee6d7ece3598c2af0feb1559d98595e5ea37cbd6"
   integrity sha512-bPn57rCjBRlt2sC24RBsu40wZsmLkSo2XeqG8k6DC1zru5eObQUIPPZAQG7W2SJ8FZQYq+BEJmvuw1Zxb3chqg==
 
 source-list-map@^2.0.0:
@@ -9696,7 +9692,7 @@ timsort@^0.3.0:
 
 to-array@0.1.4:
   version "0.1.4"
-  resolved "http://192.168.200.99:4873/to-array/-/to-array-0.1.4.tgz#17e6c11f73dd4f3d74cda7a4ff3238e9ad9bf890"
+  resolved "http://registry.yarnpkg.com/to-array/-/to-array-0.1.4.tgz#17e6c11f73dd4f3d74cda7a4ff3238e9ad9bf890"
   integrity sha1-F+bBH3PdTz10zaek/zI46a2b+JA=
 
 to-arraybuffer@^1.0.0:
@@ -9784,7 +9780,7 @@ ts-loader@^6.2.1:
 
 ts-plugin-legions@^0.0.10-beta.1:
   version "0.0.10-beta.1"
-  resolved "http://192.168.200.99:4873/ts-plugin-legions/-/ts-plugin-legions-0.0.10-beta.1.tgz#0cf1bf3f729081285e5a8ce7f49c6f2d20cbcab6"
+  resolved "http://registry.yarnpkg.com/ts-plugin-legions/-/ts-plugin-legions-0.0.10-beta.1.tgz#0cf1bf3f729081285e5a8ce7f49c6f2d20cbcab6"
   integrity sha512-33r+WIH+7yB+XWwCM0yqE7IYbBfFuCaDkjV2mIDmYpG8Dhm/eb9dFe3Jp9kp1CtvkyTKJpfvL6rFOqiAB/fGXQ==
   dependencies:
     invariant "^2.2.1"
@@ -10485,7 +10481,7 @@ ws@^6.0.0, ws@^6.2.1:
 
 ws@~6.1.0:
   version "6.1.4"
-  resolved "http://192.168.200.99:4873/ws/-/ws-6.1.4.tgz#5b5c8800afab925e94ccb29d153c8d02c1776ef9"
+  resolved "http://registry.yarnpkg.com/ws/-/ws-6.1.4.tgz#5b5c8800afab925e94ccb29d153c8d02c1776ef9"
   integrity sha512-eqZfL+NE/YQc1/ZynhojeV8q+H050oR8AZ2uIev7RU10svA9ZnJUddHcOUZTJLinZ9yEfdA2kSATS2qZK5fhJA==
   dependencies:
     async-limiter "~1.0.0"
@@ -10496,7 +10492,7 @@ xdg-basedir@^3.0.0:
 
 xmlhttprequest-ssl@~1.5.4:
   version "1.5.5"
-  resolved "http://192.168.200.99:4873/xmlhttprequest-ssl/-/xmlhttprequest-ssl-1.5.5.tgz#c2876b06168aadc40e57d97e81191ac8f4398b3e"
+  resolved "http://registry.yarnpkg.com/xmlhttprequest-ssl/-/xmlhttprequest-ssl-1.5.5.tgz#c2876b06168aadc40e57d97e81191ac8f4398b3e"
   integrity sha1-wodrBhaKrcQOV9l+gRkayPQ5iz4=
 
 xtend@^4.0.0, xtend@~4.0.1:
@@ -10552,7 +10548,7 @@ yargs@^13.3.2:
 
 yeast@0.1.2:
   version "0.1.2"
-  resolved "http://192.168.200.99:4873/yeast/-/yeast-0.1.2.tgz#008e06d8094320c372dbc2f8ed76a0ca6c8ac419"
+  resolved "http://registry.yarnpkg.com/yeast/-/yeast-0.1.2.tgz#008e06d8094320c372dbc2f8ed76a0ca6c8ac419"
   integrity sha1-AI4G2AlDIMNy28L47XagymyKxBk=
 
 zscroller@~0.4.0:
