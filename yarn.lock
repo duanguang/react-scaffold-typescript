@@ -6184,36 +6184,32 @@ layout@~2.2.0:
   dependencies:
     bin-pack "~1.0.1"
 
-legions-decorator@^0.0.2:
-  version "0.0.2"
-  resolved "http://192.168.200.99:4873/legions-decorator/-/legions-decorator-0.0.2.tgz#4eda9c7d805fe1b24eb0790f406ac46d799e226a"
-  integrity sha512-NeQDBYVCfPN7eGG5jdVTbBrUez9AMbge6R49Q3OM5ezjeHe55hROCzIMB2eGQAnKq7mOcufV/MsZTmwpnvANlw==
+legions-decorator@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/legions-decorator/-/legions-decorator-0.0.4.tgz#a1d4853b29b32da10eee1d76dabf9f63b4587bed"
+  integrity sha512-eDvFVmkClc4L0DKwlfTV9RW/ajWJNb78AeMumMYnLRgquc9I0XQ33UbY1SOv1iKiXybxVcI3TIKbhF+vTscKbg==
   dependencies:
-    legions-utils-tool "^0.0.6"
+    legions-utils-tool "^0.0.8"
     reflect-metadata "^0.1.13"
     warning "^3.0.0"
 
-legions-lunar@^0.0.4:
-  version "0.0.4"
-  resolved "http://192.168.200.99:4873/legions-lunar/-/legions-lunar-0.0.4.tgz#203d703c386733c0ce01bd7e1839ebb97b7ec35d"
-  integrity sha512-iKyJSPPHhm+nu9e0GerAlCEG/BEfltxZz2v1ZJRUhJr4yJoEidh2nHSblbPYakIx/c4uSExC1BGHbsU/7gUAbw==
+legions-lunar@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/legions-lunar/-/legions-lunar-0.0.5.tgz#378b06ee5a25bb19ad201c374df89635bb9f8c9b"
+  integrity sha512-HSbk4QpNBm7HDTJwReGQ2sRNzfK6v4jxdxJGvuPyCBNQLP8tdGpvjDAP9seMv8bUf9At6woVvbU0g48+SqKFhA==
   dependencies:
+    legions-thirdparty-plugin "^0.0.8"
     warning "^3.0.0"
 
 legions-thirdparty-plugin@^0.0.8:
   version "0.0.8"
-  resolved "http://192.168.200.99:4873/legions-thirdparty-plugin/-/legions-thirdparty-plugin-0.0.8.tgz#a3fe88e9716bfd10dcc41e3524f84e9f7e978f10"
-  integrity sha512-Z5hZ20lnGnVfC5MQkm2wlpAKIIOfnNVQbQF77cUm5aQm7rBtEtQvtSuKRNOAHFb/barh4/E7lnaSU1Iis2a1xg==
-
-legions-utils-tool@^0.0.6:
-  version "0.0.6"
-  resolved "http://192.168.200.99:4873/legions-utils-tool/-/legions-utils-tool-0.0.6.tgz#d052d83d277fdcf5eb44ef12c676faa90eda52d8"
-  integrity sha512-NK2Gva6EQz9CQVgTqvoChiB1zb3VYcx077l2eU/NLoErid5LsAk3R6ljikc4HkmIp9gkkR8bT9+CQWW4baB1Sw==
+  resolved "https://registry.yarnpkg.com/legions-thirdparty-plugin/-/legions-thirdparty-plugin-0.0.8.tgz#b5a683c58fc6d0bd2a8a155015ad9a2e4ec277e4"
+  integrity sha512-RTQmRZ4/2hmis7Twa+FIDhxQq0L4b7AUxFOyIz00NI9xGX2Z3zFr2nU6tcFL3Ybui7MOX7vMT2breP6fOt5Gpg==
 
 legions-utils-tool@^0.0.8:
   version "0.0.8"
-  resolved "http://192.168.200.99:4873/legions-utils-tool/-/legions-utils-tool-0.0.8.tgz#526dda43e78e070c0ca221cd57645b2723632b82"
-  integrity sha512-aq+Y59ufQWcKKRQmPe9vujd5oRhtQhQ9a4Ni3ERAagg9fP/vfS9AQ7ZGB81i7CQZtT44XNTQoO7uQs7seEnQWw==
+  resolved "https://registry.yarnpkg.com/legions-utils-tool/-/legions-utils-tool-0.0.8.tgz#c58cb1e5ca4e4b6754913474fb401163c46ec116"
+  integrity sha512-rahA2EAA0QmEmDbrutlrvB9fRuxEb2Q6dsqkmTJBmvaBqgL0Hd6R+gqDgHhs/l2KTVNVAbK+ITT5ddagxCiSKA==
 
 legions-utils@0.0.6, legions-utils@^0.0.6:
   version "0.0.6"

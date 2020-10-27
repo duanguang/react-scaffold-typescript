@@ -47,8 +47,8 @@
     "xlsx": "^0.14.4",
     "dexie": "^2.0.4",
     "legions-thirdparty-plugin": "^0.0.8",
-    "legions-lunar": "^0.0.4",
-    "legions-decorator": "^0.0.2",
+    "legions-lunar": "^0.0.5",
+    "legions-decorator": "^0.0.4",
     "legions-utils-tool": "^0.0.8"
   }
 }
