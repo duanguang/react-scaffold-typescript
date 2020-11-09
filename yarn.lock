@@ -595,13 +595,6 @@ aws4@^1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.8.0.tgz#f0e003d9ca9e7f59c7a508945d7b2ef9a04a542f"
 
-axios@^0.18.0:
-  version "0.18.0"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.18.0.tgz#32d53e4851efdc0a11993b6cd000789d70c05102"
-  dependencies:
-    follow-redirects "^1.3.0"
-    is-buffer "^1.1.5"
-
 babel-cli@^6.14.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-cli/-/babel-cli-6.26.0.tgz#502ab54874d7db88ad00b887a06383ce03d002f1"
@@ -1521,33 +1514,34 @@ brain-store-react@^0.1.9:
     hoist-non-react-statics "^1.2.0"
     mobx-react "^4.1.0"
 
-brain-store-utils@^0.1.12:
-  version "0.1.12"
-  resolved "https://registry.yarnpkg.com/brain-store-utils/-/brain-store-utils-0.1.12.tgz#2f442c051560c31500024a1f38272cd279e08ef1"
+brain-store-utils@^0.1.13-beta.3:
+  version "0.1.13-beta.3"
+  resolved "https://registry.npm.taobao.org/brain-store-utils/download/brain-store-utils-0.1.13-beta.3.tgz#71b762da547b31254282a39d69d52311a3e3e822"
+  integrity sha1-cbdi2lR7MSVCgqOdadUjEaPj6CI=
   dependencies:
-    brain-store "^0.1.9"
     invariant "^2.2.1"
     warning "^3.0.0"
 
-brain-store@^0.1.9:
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/brain-store/-/brain-store-0.1.9.tgz#23a15719b7f8e28cecf8a0b07d9a8bf8e171bcff"
+brain-store@^0.1.10-rc.1:
+  version "0.1.10-rc.1"
+  resolved "https://registry.npm.taobao.org/brain-store/download/brain-store-0.1.10-rc.1.tgz#b518b7a20010e204e83bee14fd63efd468b2ba76"
+  integrity sha1-tRi3ogAQ4gToO+4U/WPv1GiyunY=
   dependencies:
     invariant "^2.2.1"
     is-plain-object "^2.0.1"
-    mobx "^3.0.0"
     superagent "^3.4.4"
     warning "^3.0.0"
 
-brains@^0.1.9:
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/brains/-/brains-0.1.9.tgz#19e05ff150149f5659d9ba641664bb5440e6882b"
+brains@^0.1.10-beta.2:
+  version "0.1.10-beta.2"
+  resolved "https://registry.npm.taobao.org/brains/download/brains-0.1.10-beta.2.tgz#4ac6c6884fc242efc984599875d9e1e40f6183d1"
+  integrity sha1-SsbGiE/CQu/JhFmYddnh5A9hg9E=
   dependencies:
-    brain-store "^0.1.9"
     brain-store-react "^0.1.9"
     history "^4.6.1"
     invariant "^2.2.1"
     isomorphic-fetch "2.2.1"
+    mobx "^3.0.0"
     mobx-react-devtools "^4.2.11"
     react "^15.1.0"
     react-dom "^15.1.0"
@@ -2521,12 +2515,6 @@ debug@^3.1.0, debug@~3.1.0:
   dependencies:
     ms "2.0.0"
 
-debug@^3.2.6:
-  version "3.2.6"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-3.2.6.tgz#e83d17de16d8a7efb7717edbe5fb10135eee629b"
-  dependencies:
-    ms "^2.1.1"
-
 decamelize-keys@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/decamelize-keys/-/decamelize-keys-1.1.0.tgz#d171a87933252807eb3cb61dc1c1445d078df2d9"
@@ -3350,12 +3338,6 @@ follow-redirects@^1.0.0:
   dependencies:
     debug "^3.1.0"
 
-follow-redirects@^1.3.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.7.0.tgz#489ebc198dc0e7f64167bd23b03c4c19b5784c76"
-  dependencies:
-    debug "^3.2.6"
-
 for-in@^1.0.1, for-in@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-1.0.2.tgz#81068d295a8142ec0ac726c6e2200c30fb6d5e80"
@@ -3852,15 +3834,6 @@ home-or-tmp@^2.0.0:
   dependencies:
     os-homedir "^1.0.0"
     os-tmpdir "^1.0.1"
-
-hoolinks@^0.1.5:
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/hoolinks/-/hoolinks-0.1.5.tgz#42cb980c91e5a2aa360e93221677902f7e9a2b08"
-  dependencies:
-    axios "^0.18.0"
-    invariant "^2.2.4"
-    json-mapper-object "^0.0.6"
-    warning "^3.0.0"
 
 hosted-git-info@^2.1.4:
   version "2.7.1"
@@ -4518,15 +4491,7 @@ json-loader@^0.5.4:
   version "0.5.7"
   resolved "https://registry.yarnpkg.com/json-loader/-/json-loader-0.5.7.tgz#dca14a70235ff82f0ac9a3abeb60d337a365185d"
 
-json-mapper-object@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/json-mapper-object/-/json-mapper-object-0.0.6.tgz#688dc8355d81d325fcb2ee22100ad87e29d67561"
-  dependencies:
-    invariant "^2.2.1"
-    reflect-metadata "^0.1.3"
-    warning "^3.0.0"
-
-json-mapper-object@^0.0.9, json-mapper-object@^0.0.9-rc1:
+json-mapper-object@^0.0.9-rc1:
   version "0.0.9"
   resolved "https://registry.yarnpkg.com/json-mapper-object/-/json-mapper-object-0.0.9.tgz#3865263180a3855e121cbfdafbe8c759a089e038"
   integrity sha512-M6cYlszrNRsYFH0RRHJlpj1jcam10slUCbx2XL16YqT+6xO6O+QyWupR/l6ghrKHId5UDdtCcjQX8zXCezMyJg==
@@ -4638,6 +4603,13 @@ lcid@^1.0.0:
   dependencies:
     invert-kv "^1.0.0"
 
+legions-control-container@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.npm.taobao.org/legions-control-container/download/legions-control-container-0.0.5.tgz#5ae3950fa21142fac88d4ed523d0bb8be35cb9af"
+  integrity sha1-WuOVD6IRQvrIjU7VI9C7i+Ncua8=
+  dependencies:
+    reflect-metadata "^0.1.13"
+
 legions-decorator@^0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/legions-decorator/-/legions-decorator-0.0.4.tgz#a1d4853b29b32da10eee1d76dabf9f63b4587bed"
@@ -4673,20 +4645,18 @@ legions-utils@^0.0.6:
     object-hash "1.3.0"
     warning "^3.0.0"
 
-legions@^0.1.24-beta:
-  version "0.1.24"
-  resolved "https://registry.yarnpkg.com/legions/-/legions-0.1.24.tgz#c7aa9ab85cd2c36eaf9a3eb5c26cf4073bd13e06"
-  integrity sha512-hWPgBaiB7SLOS/JDgNrtc17XlfV/ZpT6ictfm6of5KuxTWm5T6iz+1b3Ux/HIk6Y3wZE2/Ghh4b0echWv3IOyg==
+legions@^0.1.24-rc.2:
+  version "0.1.24-rc.2"
+  resolved "https://registry.npm.taobao.org/legions/download/legions-0.1.24-rc.2.tgz#894d517bc65fe6976b2f53388a3fb5e03c93dbc0"
+  integrity sha1-iU1Re8Zf5pdrL1M4ij+14DyT28A=
   dependencies:
-    brain-store "^0.1.9"
+    brain-store "^0.1.10-rc.1"
     brain-store-react "^0.1.9"
-    brain-store-utils "^0.1.12"
-    brains "^0.1.9"
+    brain-store-utils "^0.1.13-beta.3"
+    brains "^0.1.10-beta.2"
     classnames "^2.2.5"
     invariant "^2.2.1"
-    json-mapper-object "^0.0.9"
-    react "^15.1.0"
-    react-dom "^15.1.0"
+    json-mapper-object "^0.0.9-rc1"
     warning "^3.0.0"
 
 less-loader@^4.0.4:
@@ -5231,10 +5201,6 @@ move-concurrently@^1.0.1:
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
-
-ms@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.1.tgz#30a5864eb3ebb0a66f2ebe6d727af06a09d86e0a"
 
 multicast-dns-service-types@^1.1.0:
   version "1.1.0"
