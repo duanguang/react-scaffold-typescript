@@ -27,7 +27,7 @@ module.exports = function (configs) {
       // },
       // }
     }),
-    apps: ['home', 'demo'],
+    apps: ['home'],
     entries: ['src/home/index'],
     webpack: {
       dllConfig: {
@@ -78,8 +78,21 @@ module.exports = function (configs) {
               use: transform.execution(null, null, null),
               include: [path.resolve(process.cwd(), 'node_modules')],
             },
+            /* {
+              test: /\.less/,
+              use: [ 'style-loader',
+                  { loader: 'css-loader', options: { importLoaders: 1 } },
+                  transform.LoaderOptions,
+                  { loader: 'less-loader', options: { javascriptEnabled: true } },
+              ],
+              include: [path.resolve('./src')],
+          }, */
           ];
-          loaders.push(...newLoaders);
+          console.log(path.resolve('./src'));
+          newLoaders.map(item => {
+            loaders.push(item);
+          });
+          /* loaders.push(...newLoaders); */
         }
       },
       /* commonsChunkPlugin:['react','mobx-react','mobx','babel-polyfill','superagent',
@@ -93,6 +106,9 @@ module.exports = function (configs) {
       autoprefixer: {
         browsers: ['last 2 version', 'safari 5', 'ios 6', 'android 4'],
       },
+      px2rem: {
+        rootValue: 75,
+      }
     },
     babel: {
       query: {

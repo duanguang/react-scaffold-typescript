@@ -1,0 +1,110 @@
+@import (reference) "../../assets//css/common.modules.less";
+
+@login: legions-login;
+@fontSize24:24px;
+@fontSize28:28px;
+@fontSize36:36px;
+@borderBottom1PX:1px solid #E5E5E5;
+body {
+    font-size: 16px; /* 修正字体大小 */
+    /* 防止页面过宽 */
+    margin: auto;
+    padding: 0;
+    /* 防止页面过宽 */
+}
+.@{login}{
+    display: flex;
+    flex-direction: column;
+    .todo{
+        flex: 0 0 150px;
+        position: relative;
+        border-bottom: @borderBottom1PX;
+        .title{
+            flex: 0 0 34px;
+            margin-top: 32px;
+            line-height: 34px;
+            margin-left: 24px;
+            font-size: @fontSize36;
+            
+        }
+        .title::before{
+            content: "";
+            width: 6px;
+            height: 26px;
+            margin-right: 10px;
+            display: inline-block;
+            background: #8C7FF5;
+        }
+        .list{
+            display: flex;
+            flex-direction: row;
+            margin-top: 32px;
+            justify-content: space-around;
+            img{
+                height: 100px;
+                width: 160px;
+            }
+        }
+    }
+    .catch-notice{
+        flex: 0 0 770px;
+        border-bottom: @borderBottom1PX;
+        margin-top: 20px;
+        .title{
+            flex: 0 0 95px;
+            margin-top: 32px;
+            line-height: 95px;
+            margin-left: 24px;
+            font-size: @fontSize36;
+            border-bottom: 1px solid #E5E5E5;
+        }
+        .title::before{
+            content: "";
+            width: 6px;
+            height: 26px;
+            margin-right: 10px;
+            display: inline-block;
+            background: #8C7FF5;
+        }
+        .list{
+            display: flex;
+            flex-direction:column;
+            height: 523px;
+            .item{
+                flex: 0 0 130px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-left: 24px;
+                font-family:system-ui;
+                margin-top: 30px;
+                border-bottom: @borderBottom1PX;
+                .contentL{
+                    width: 487px;
+                    height: 45px;
+                    overflow: hidden; /*超出部分隐藏*/
+                    white-space: nowrap;
+                    text-overflow: ellipsis; /*适用IE*/
+                    -o-text-overflow: ellipsis;
+                }
+                .contentR{
+                    width: 215px;
+                    height: 45px;
+                    overflow: hidden; /*超出部分隐藏*/
+                    white-space: nowrap;
+                    text-overflow: ellipsis; /*适用IE*/
+                    -o-text-overflow: ellipsis;
+                }
+                .f24{
+                    font-size:@fontSize24;
+                }
+                .f28{
+                    font-size: @fontSize28;
+                }
+                .color-gray{
+                    color: #787878;
+                }
+            }
+        }
+    }
+}
