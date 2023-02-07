@@ -1,5 +1,5 @@
 {
-  "name": "project-demo",
+  "name": "proj",
   "version": "0.0.1",
   "description": "",
   "main": "",
@@ -7,12 +7,14 @@
     "clean": "rimraf dist/*",
     "dll": "brain-cli dll",
     "start": "npm run dev",
-    "dev": "brain-cli dev",
+    "dev": "npm run install:qiankun && cross-env NODE_ENV=dev brain-cli dev",
     "dev:home": "brain-cli dev --apps=home --cssModules=true",
-    "build:uat": "brain-cli build dist --apps=scm --webpackJsonp=webpackJsonpHomeQaName",
-    "build:prod": "brain-cli build prod --apps=scm --webpackJsonp=webpackJsonpHomeQaName",
-    "build:qa": "brain-cli build test --apps=scm --webpackJsonp=webpackJsonpHomeQaName",
-    "build:s": "brain-cli build -s"
+    "build:uat": "brain-cli build dist --apps=home --webpackJsonp=webpackJsonpHomeQaName",
+    "build:prod": "brain-cli build prod --apps=home --webpackJsonp=webpackJsonpHomeQaName",
+    "build:qa": "brain-cli build test --apps=home --webpackJsonp=webpackJsonpHomeQaName",
+    "build:s": "brain-cli build -s",
+    "build":"npm run install:qiankun && brain-cli build",
+    "install:qiankun": "cp ./node_modules/@legions/pro-design/es/assets/patches/qiankun/* ./node_modules/qiankun/es/"
   },
   "husky": {
     "hooks": {
@@ -22,29 +24,27 @@
   "author": "",
   "license": "",
   "devDependencies": {
-    "@commitlint/cli": "^7.3.2",
-    "@commitlint/config-conventional": "^7.3.1",
-    "babel-cli": "^6.14.0",
-    "babel-polyfill": "^6.23.0",
-    "brain-cli": "^1.0.8-alpha.4",
-    "husky": "^1.3.1",
-    "rimraf": "^2.5.4"
+     "@commitlint/cli": "^13.0.0",
+     "@commitlint/config-conventional":"^13.0.0",
+      "@types/react": "^16.0.0",
+      "@types/react-dom": "^16.0.0",
+      "brain-cli": "^1.1.3",
+      "cross-env": "^2.0.1",
+      "husky": "^1.3.1"
   },
   "dependencies": {
-    "@types/node": "^10.0.0",
-    "@types/react": "^16.9.35",
+    "@legions/pro-design": "^2.0.13",
     "antd": "^2.7.4",
-    "bundle-loader": "^0.5.5",
-    "json-mapper-object": "^0.0.9-rc1",
-    "legions": "^1.0.9-rc.2",
-    "legions-utils": "^0.0.6",
-    "sortablejs": "^1.10.0-rc3",
-    "socket.io-client": "2.2.0",
-    "ts-plugin-legions": "^0.0.9",
-    "legions-thirdparty-plugin": "^0.0.8",
-    "legions-control-container": "^0.0.5",
-    "legions-lunar": "^0.0.5",
-    "legions-decorator": "^0.0.4",
-    "legions-utils-tool": "^0.0.8"
+    "buffer": "^6.0.3",
+    "echarts": "^5.0.0",
+    "jsmind": "^0.4.8",
+    "json-mapper-object": "0.1.2",
+    "legions-nprogress": "^1.0.0",
+    "legions-pro-echarts": "^1.1.3",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "runtime-import":"^2.2.1",
+    "socket.io-client": "^2.2.0",
+    "ts-plugin-legions": "0.0.10-beta.1"
   }
 }
