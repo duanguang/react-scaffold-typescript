@@ -1,158 +1,165 @@
-/* var {
-    createTransformer,
-    createTransformerReactJsxProps
-} = require('ts-plugin-legions'); */
-const FilterWarningsPlugin = require('webpack-filter-warnings-plugin');
+const { createTransformer,createTransformerReactJsxProps } = require('ts-plugin-legions');
+// const FilterWarningsPlugin = require('webpack-filter-warnings-plugin');
 var packageConfig = require('./package.json');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
-const webpack = require('webpack');
 const chalk = require('chalk');
 const path = require('path');
+const resolve = dir => path.resolve(__dirname,dir);
+/** @type {import('./node_modules/brain-cli').eConfig} */
 module.exports = function (configs) {
-  configs = Object.assign({}, configs, {
-    name: packageConfig.name,
-    defaultPort: 8002,
-    projectType: 'ts',
-    publicPath: '/app/',
-    isTslint: true,
-    //server:'172.16.15.50',
-    devServer: Object.assign({}, configs.devServer, {
-      // proxy: {
-      // '/v1/oss/uploadByForm': {
-      //     target: 'https://qa-fc.hoolinks.com',
-      //     secure: false,
-      //     onProxyReq: (proxyReq, req, res) => {
-      //         proxyReq.setHeader('host', 'qa-fc.hoolinks.com');
-      //     },
-      // },
-      // }
-    }),
-    apps: ['home'],
-    entries: ['src/home/index'],
-    webpack: {
-      dllConfig: {
-        vendors: [
-          'react',
-          'mobx',
-          'mobx-react',
-          'superagent',
-          'react-router-dom',
-          'react-dom',
-          'classnames',
-          'isomorphic-fetch',
-          'history',
-          'invariant',
-          'warning',
-          'hoist-non-react-statics',
-        ],
-      },
-      commonsChunkPlugin: ['common', 'vendor'],
-      disableReactHotLoader: false,
-      cssModules: {
-        enable: true, // 默认false
-      },
-      plugins: [
-        new ProgressBarPlugin({
-          summary: false,
-          format:
-            `${chalk.green.bold('build [:bar]')}` +
-            chalk.green.bold(':percent') +
-            ' (:elapsed seconds)',
-          summaryContent: '',
-        }),
-        /* new webpack.NamedChunksPlugin(),
-                new FilterWarningsPlugin({
-                  exclude: /export .* was not found in/,
-                }) */
-      ],
-      extend: (loaders, { isDev, loaderType, projectType, transform }) => {
-        // transform = {
-        //     cssModule: CSS_MODULE_OPTION, // 内部css modules 默认值
-        //     LoaderOptions: postcss_loader, // 内部默认加载器参数
-        //     execution: generateLoaders // 内部通用生成loader use 值函数
-        // }
-        if (loaderType === 'StyleLoader' && transform) {
-          const newLoaders = [
+    let vendors = [
+        /* 'react',*/
+        'mobx',
+        'mobx-react',
+        'superagent',
+        'classnames',
+        // 'isomorphic-fetch',
+        'history',
+        'invariant',
+        'warning',
+        'hoist-non-react-statics',
+        'sortablejs',
+    ]
+
+    const {
+        npm_lifecycle_script,
+        npm_config_argv
+    } = process.env;
+    const original = JSON.parse(npm_config_argv).original
+    let cdn = original.find((item) => item.indexOf('cdn') > -1) || '';
+    !cdn && (cdn = npm_lifecycle_script.split('--').find((item) => item.indexOf('cdn') > -1) || '')
+    let __cdn = cdn ? cdn.match(/cdn=(.*)/)[1] : '';
+    let _vendors = process.env.NODE_ENV === 'dev' ? vendors : {
+        value: vendors,
+        externalUrl: __cdn
+    }
+    /** @type {import('./node_modules/brain-cli').config} */
+    let config = {
+        name: packageConfig.name,
+        defaultPort: 8002,
+        publicPath: '/app/',
+        isTslint: true,
+        // server:'192.168.100.173',
+        devServer: Object.assign({},
+            configs.devServer,
             {
-              test: /\.css/,
-              use: transform.execution(null, null, null),
-              include: [path.resolve(process.cwd(), 'node_modules')],
+                // proxy: {
+                // '/v1/oss/uploadByForm': {
+                //     target: 'https://qa-fc.hoolinks.com',
+                //     secure: false,
+                //     onProxyReq: (proxyReq, req, res) => {
+                //         proxyReq.setHeader('host', 'qa-fc.hoolinks.com');
+                //     },
+                // },
+                // }
+            }),
+        apps: ['main'],
+        entries: ['src/main/index'],
+        webpack: {
+            resolve: {
+                alias: {
+                    '@': resolve('src'),
+                    '@main': resolve('src/main'),
+                }
             },
-            /* {
-              test: /\.less/,
-              use: [ 'style-loader',
-                  { loader: 'css-loader', options: { importLoaders: 1 } },
-                  transform.LoaderOptions,
-                  { loader: 'less-loader', options: { javascriptEnabled: true } },
-              ],
-              include: [path.resolve('./src')],
-          }, */
-          ];
-          console.log(path.resolve('./src'));
-          newLoaders.map(item => {
-            loaders.push(item);
-          });
-          /* loaders.push(...newLoaders); */
-        }
-      },
-      /* commonsChunkPlugin:['react','mobx-react','mobx','babel-polyfill','superagent',
-                'react-router-dom','classnames','isomorphic-fetch',
-                 'react-dom','history','invariant','warning','hoist-non-react-statics'], */
-    },
-    htmlWebpackPlugin: {
-      title: 'webApp' /*O2O订单管理系统*/,
-    },
-    postcss: {
-      autoprefixer: {
-        browsers: ['last 2 version', 'safari 5', 'ios 6', 'android 4'],
-      },
-      px2rem: {
-        rootValue: 75,
-      }
-    },
-    babel: {
-      query: {
-        presets: [
-          [
-            '@babel/preset-env',
-            {
-              /*  targets: {
+            css: {
+                loader_include: [/antd\-mobile/]
+            },
+            output: {
+                library: `${packageConfig.name}-[name]`,
+                libraryTarget: 'window',
+            },
+            dllConfig: {
+                compileOptions: {
+                    output: {
+                        libraryTarget: 'window',
+                    },
+                },
+                vendors: _vendors,
+            },
+            tsCompilePlugin: {
+                option: {
+                    getCustomTransformers: () => ({
+                        before: [createTransformer([{
+                            libraryName: 'legions/store',
+                            bindings: ['StoreModules'],
+                        },]
+                        ),createTransformerReactJsxProps({
+                            components: []
+                        })]
+                    })
+                },
+            },
+            disableReactHotLoader: false,
+            plugins: [
+                new ProgressBarPlugin({
+                    summary: false,
+                    format: `${chalk.green.bold('build [:bar]')}` + chalk.green.bold(':percent') + ' (:elapsed seconds)',
+                    summaryContent: '',
+                }),
+                // new webpack.NamedChunksPlugin(),
+                // new FilterWarningsPlugin({
+                //     exclude: /export .* was not found in/,
+                // })
+            ],
+        },
+        htmlWebpackPlugin: {
+            title: "webApp",
+        },
+        postcss: {
+            autoprefixer: {
+                browsers: [
+                    'last 2 version',
+                    'safari 5',
+                    'ios 6',
+                    'android 4',
+                    'ie >= 10',
+                ],
+            },
+            px2rem: {
+                rootValue: 75,
+                exclude:[/antd\-mobile/]
+            }
+        },
+        babel: {
+            query: {
+                presets: [
+                    [
+                        "@babel/preset-env",
+                        {
+                            /*  targets: {
                                esmodules: true,
                              }, */
-              useBuiltIns: 'usage', // entry usage  entry模式兼容IE11
-              corejs: '2',
-              targets: {
-                browsers: [
-                  // 浏览器
-                  'last 2 versions',
-                  'ie >= 10',
-                ],
-              },
+                            "useBuiltIns": "entry", // entry usage  entry模式兼容IE11
+                            "corejs": "2",
+                            "targets": {
+                                "browsers": [ // 浏览器
+                                    "last 2 versions",
+                                    "ie >= 10"
+                                ],
+                            },
+                        }
+                    ],
+                    /*  "@babel/preset-env", */
+                    "@babel/preset-react"],
+                cacheDirectory: '.webpack_cache',
+                plugins: [
+                    'add-module-exports',
+                    '@babel/plugin-transform-runtime',
+                    ["@babel/plugin-proposal-decorators",{ "legacy": true }],
+                    ['import',{
+                        libraryName: 'antd-mobile',
+                        "libraryDirectory": "es/components",
+                        style: false
+                    }],
+
+                ]
             },
-          ],
-          /*  "@babel/preset-env", */
-          '@babel/preset-react',
-        ],
-        cacheDirectory: '.webpack_cache',
-        plugins: [
-          'add-module-exports',
-          '@babel/plugin-transform-runtime',
-          [
-            '@babel/plugin-proposal-decorators',
-            {
-              legacy: true,
-            },
-          ],
-          [
-            'import',
-            {
-              libraryName: 'antd-mobile',
-              style: true,
-            },
-          ],
-        ],
-      },
-    },
-  });
-  return configs;
+            loader_include: []
+        }
+    }
+    return  Object.assign({}, configs,
+        config);
 };
+
+
