@@ -2,7 +2,6 @@ import create from '@legions/core';
 import App from './containers/App';
 import { fetch } from '@legions/core/fetch';
 import ReactDOM from 'react-dom';
-/* import '../common/components/nprogress/index.css'; */
 import { createBrowserHistory } from 'history';
 if (!window.fetch) {
   window.fetch = fetch
@@ -28,7 +27,6 @@ export async function mount(props) {
 export async function unmount() { ReactDOM.unmountComponentAtNode(document.getElementById(appId)) }
 // @ts-ignore
 if (module.hot && process.env.environment === 'dev') {
-  console.log('222')
   // @ts-ignore
   module.hot.accept();
 }
