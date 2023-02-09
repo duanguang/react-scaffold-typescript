@@ -3,6 +3,7 @@ import 'regenerator-runtime/runtime';
 import create from '@legions/core';
 import ReactDOM from 'react-dom';
 import App from './containers/App';
+import { fetch } from '@legions/core/fetch';
 import { globalStateStore } from '@/common/stores/global.store';
 import { createBrowserHistory } from 'history';
 if (!window.fetch) {
